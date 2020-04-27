@@ -1,0 +1,32 @@
+*{
+    margin: 10px auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+#first, #second, #third{
+    width: 100%;
+    font-size: 1.5rem;
+    height: 150px;
+}
+
+#first{
+    background-color: red;
+}
+
+#second{
+    background-color: green;
+}
+
+#third{
+    background-color: blue;
+}
+
+#first:hover, #second:hover, #third:hover{
+    font-weight: bold;
+}
+
+input{ 
+    text-align: left;;
+}
