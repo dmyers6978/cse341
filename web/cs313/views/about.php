@@ -10,10 +10,10 @@
 </head>
 <body>
     <header>
-        <?php include '../common/header.php';?>
+        <?php include './common/header.php';?>
     </header>
     <nav>
-        <?php include '../common/nav.php';?>
+        <?php include './common/nav.php';?>
     </nav>
     <main>
         <img src="./images/bike.jpg" alt="Bike">
