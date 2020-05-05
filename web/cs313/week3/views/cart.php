@@ -12,23 +12,28 @@
 <body>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/header.php';?>
     <main>
+        <?php if(empty($_SESSION['cart'])){
+            echo "<h1>You have nothing in your cart yet. Click <a href='./'>here</a> to continue shopping.</h1>";
+        } else{ echo"
         <fieldset>
             <legend>Cart Items</legend>
             <table>
                 <thead>
                     <tr><td>Item Title</td><td>Price</td><td>Delete Item</td></tr>
                 </thead>
-                <tbody>
-                <?php foreach($_SESSION['cart'] as $key => $item){
+                <tbody>";
+                foreach($_SESSION['cart'] as $key => $item){
                     var_dump($key);
                         echo "<tr><td>$item[itemTitle]</td><td>$item[itemPrice]</td><td><a href='./?action=remItem&itemId=$key'>&#10006;</a></td></tr>";
-                    }?>
-                    <tr><td></td><td><?php $total = 0;
+                    }
+                    echo"
+                    <tr><td></td><td>";
+                    $total = 0;
                     foreach($_SESSION['cart'] as $item){
                         $total = $total + $item['itemPrice'];
                     }
-                    echo "$$total";
-                        ?></td></tr>
+                    echo "$$total</td></tr>";
+                    ?>
                 </tbody>
             </table>
         </fieldset>
