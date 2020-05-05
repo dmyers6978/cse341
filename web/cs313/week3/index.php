@@ -20,6 +20,14 @@ switch($action){
     break;
 
     case 'confirmation':
+        $fName = filter_input(INPUT_POST, 'fName', FILTER_SANITIZE_STRING);
+        $lName = filter_input(INPUT_POST, 'lName', FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $address1 = filter_input(INPUT_POST, 'address1', FILTER_SANITIZE_STRING);
+        $address2 = filter_input(INPUT_POST, 'address2', FILTER_SANITIZE_STRING);
+        $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING);
+        $state = filter_input(INPUT_POST, 'state', FILTER_SANITIZE_STRING);
+        $zip = filter_input(INPUT_POST, 'zip', FILTER_VALIDATE_INT);
         include './views/confirmation.php';
         exit;
     break;
