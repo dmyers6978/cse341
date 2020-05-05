@@ -13,13 +13,14 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/header.php';?>
     <main>
         <form method="post" action="./">
-        <label for="fName">First Name: </label><input type="text" name="fName" id="fName">
-        <label for="lName">Last Name: </label><input type="text" name="lName" id="lName">
-        <label for="email">Email: </label><input type="text" name="email" id="email">
-        <label for="address1">Address Line 1: </label><input type="text" name="address1" id="address1">
-        <label for="address2">Address Line 2: </label><input type="text" name="address2" id="address2">
-        <label for="city">City: </label><input type="text" name="city" id="city">
+        <label for="fName">First Name: </label><input type="text" name="fName" id="fName"><br>
+        <label for="lName">Last Name: </label><input type="text" name="lName" id="lName"><br>
+        <label for="email">Email: </label><input type="text" name="email" id="email"><br>
+        <label for="address1">Address Line 1: </label><input type="text" name="address1" id="address1"><br>
+        <label for="address2">Address Line 2: </label><input type="text" name="address2" id="address2"><br>
+        <label for="city">City: </label><input type="text" name="city" id="city"><br>
         <label for="state">State: </label><select name="state" id="state">
+          <option value=0>Select a state</option>
 	        <option value="AL">Alabama</option>
 	        <option value="AK">Alaska</option>
 	        <option value="AZ">Arizona</option>
@@ -71,8 +72,8 @@
 	        <option value="WV">West Virginia</option>
 	        <option value="WI">Wisconsin</option>
 	        <option value="WY">Wyoming</option>
-        </select>				
-        <label for="zip">Zip Code: </label><input type="text" name="zip" id="zip">
+        </select><br>
+        <label for="zip">Zip Code: </label><input type="text" name="zip" id="zip"><br>
         <input type="hidden" name="action" value="confirmation">
         <input type="submit" value="Check Out">
       </form>
