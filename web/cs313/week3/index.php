@@ -24,7 +24,7 @@ switch($action){
         exit;
     break;
 
-    case 'addToCart';
+    case 'addToCart':
     $itemTitle = filter_input(INPUT_GET, 'itemTitle', FILTER_SANITIZE_STRING);
     $itemPrice = filter_input(INPUT_GET, 'itemPrice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     array_push(array('itemTitle'=>$itemTitle,'itemPrice'=>$itemPrice));
