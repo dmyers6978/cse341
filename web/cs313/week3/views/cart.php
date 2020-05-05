@@ -16,11 +16,11 @@
             <legend>Cart Items</legend>
             <table>
                 <thead>
-                    <tr><td>Item Title</td><td>Price</td></tr>
+                    <tr><td>Item Title</td><td>Price</td><td>Delete Item</td></tr>
                 </thead>
                 <tbody>
                 <?php foreach($_SESSION['cart'] as $item){
-                        echo "<tr><td>$item[itemTitle]</td><td>$item[itemPrice]</td></tr>";
+                        echo "<tr><td>$item[itemTitle]</td><td>$item[itemPrice]</td><td><a href='./?action=remItem&itemId=".key($_SESSION['cart'])."'>&#10006;</a></td></tr>";
                     }?>
                     <tr><td></td><td><?php $total = 0;
                     foreach($_SESSION['cart'] as $item){
