@@ -35,7 +35,7 @@ switch($action){
     case 'remItem':
         $itemId = filter_input(INPUT_GET, 'itemId', FILTER_VALIDATE_INT);
         unset($_SESSION['cart'][intval($itemId)]);
-        header('location: ./index.php');
+        header('location: ./index.php?action=viewCart');
         exit;
     default:
     include './views/viewItems.php';
