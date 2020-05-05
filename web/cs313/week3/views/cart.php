@@ -30,6 +30,7 @@
                         $total = $total + $item['itemPrice'];
                     }
                     echo "$$total</td></tr>";
+                }
                     ?>
                 </tbody>
             </table>
