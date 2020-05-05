@@ -16,7 +16,7 @@
         <p><?php echo count($_SESSION['cart']);?> items will be shipped to </p>
         <p><strong><?php echo "$fName $lName";?></strong></p>
         <?php echo "<p>$address1</p>";
-        if(!empty($address2){echo "<p>$address2</p>";}
+        if(!empty($address2)){echo "<p>$address2</p>";}
         echo "<p>$city, $state $zip</p>";
         ?>
     </main>
