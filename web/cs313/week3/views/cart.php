@@ -14,8 +14,7 @@
     <main>
         <?php if(empty($_SESSION['cart'])){
             echo "<h1>You have nothing in your cart yet. Click <a href='./'>here</a> to continue shopping.</h1>";
-        } else{ echo"
-        <fieldset>
+        } else{ echo "<fieldset>
             <legend>Cart Items</legend>
             <table>
                 <thead>
@@ -23,11 +22,9 @@
                 </thead>
                 <tbody>";
                 foreach($_SESSION['cart'] as $key => $item){
-                    var_dump($key);
                         echo "<tr><td>$item[itemTitle]</td><td>$item[itemPrice]</td><td><a href='./?action=remItem&itemId=$key'>&#10006;</a></td></tr>";
                     }
-                    echo"
-                    <tr><td></td><td>";
+                    echo "<tr><td></td><td>";
                     $total = 0;
                     foreach($_SESSION['cart'] as $item){
                         $total = $total + $item['itemPrice'];
