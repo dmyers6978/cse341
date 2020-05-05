@@ -13,7 +13,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/header.php';?>
     <main>
         <?php if(empty($_SESSION['cart'])){
-            echo "<h1>You have nothing in your cart yet. Click <a href='./'>here</a> to continue shopping.</h1>";
+            echo "<p>You have nothing in your cart yet. Click <a href='./'>here</a> to continue shopping.</p>";
         } else{ echo "<fieldset>
             <legend>Cart Items</legend>
             <table>
@@ -29,11 +29,10 @@
                     foreach($_SESSION['cart'] as $item){
                         $total = $total + $item['itemPrice'];
                     }
-                    echo "$$total</td></tr>";
+                    echo "$$total</td></tr></tbody></table>
+                    <a href='./?action=checkout'>Check Out</a>";
                 }
                     ?>
-                </tbody>
-            </table>
         </fieldset>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
