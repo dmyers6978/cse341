@@ -30,8 +30,13 @@ switch($action){
     array_push($_SESSION['cart'], array('itemTitle'=>$itemTitle,'itemPrice'=>$itemPrice));
     header('location: ./index.php');
     exit;
-break;
+    break;
 
+    case 'remItem':
+        $itemId = filter_input(INPUT_GET, 'itemId', FILTER_VALIDATE_INT);
+        unset($_SESSION['cart'][intval($itemId)]);
+        header('location: ./index.php');
+        exit;
     default:
     include './views/viewItems.php';
     exit;
