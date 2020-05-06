@@ -1,0 +1,13 @@
+main{
+    text-align: center;
+}
+
+main table{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main table thead{
+    background-color: lightslategray;
+}

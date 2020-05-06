@@ -15,17 +15,16 @@
     <main>
         <?php if(empty($_SESSION['cart'])){
             echo "<p>You have nothing in your cart yet. Click <a href='./'>here</a> to continue shopping.</p>";
-        } else{ echo "<fieldset>
-            <legend>Cart Items</legend>
+        } else{ echo "<h1>Cart Items</h1>
             <table>
                 <thead>
                     <tr><td>Item Title</td><td>Price</td><td>Delete Item</td></tr>
                 </thead>
                 <tbody>";
                 foreach($_SESSION['cart'] as $key => $item){
-                        echo "<tr><td>$item[itemTitle]</td><td>$item[itemPrice]</td><td><a href='./?action=remItem&itemId=$key'>&#10006;</a></td></tr>";
+                        echo "<tr><td>$item[itemTitle]</td><td>$$item[itemPrice]</td><td><a href='./?action=remItem&itemId=$key'>&#10006;</a></td></tr>";
                     }
-                    echo "<tr><td></td><td>";
+                    echo "<tr><td>Total</td><td>";
                     $total = 0;
                     foreach($_SESSION['cart'] as $item){
                         $total = $total + $item['itemPrice'];
