@@ -26,7 +26,7 @@
             <figcaption>
                 <h2>Item Title</h2>
                 <p>$2.99</p>
-                <a href="./index.php?action=addToCart&itemTitle=item1&itemPrice=2.99">Add to cart</a>
+                <a href="./index.php?action=addToCart&itemTitle=item2&itemPrice=2.99">Add to cart</a>
         </figcaption>
         </div>
         <div>
@@ -34,7 +34,7 @@
             <figcaption>
                 <h2>Item Title</h2>
                 <p>$3.99</p>
-                <a href="./index.php?action=addToCart&itemTitle=item1&itemPrice=3.99">Add to cart</a>
+                <a href="./index.php?action=addToCart&itemTitle=item3&itemPrice=3.99">Add to cart</a>
         </figcaption>
         </div>
         <div>
@@ -42,7 +42,7 @@
             <figcaption>
                 <h2>Item Title</h2>
                 <p>$4.99</p>
-                <a href="./index.php?action=addToCart&itemTitle=item1&itemPrice=4.99">Add to cart</a>
+                <a href="./index.php?action=addToCart&itemTitle=item4&itemPrice=4.99">Add to cart</a>
         </figcaption>
         </div>
     </main>

@@ -22,7 +22,7 @@
                 </thead>
                 <tbody>";
                 foreach($_SESSION['cart'] as $key => $item){
-                        echo "<tr><td>$item[itemTitle]</td><td>$$item[itemPrice]</td><td><a href='./?action=remItem&itemId=$key'>&#10006;</a></td></tr>";
+                        echo "<tr><td>$item[itemTitle]</td><td>$$item[itemPrice]</td><td><a href='./?action=remItem&itemId=$key'>&#10060;</a></td></tr>";
                     }
                     echo "<tr><td>Total</td><td>";
                     $total = 0;
@@ -30,7 +30,7 @@
                         $total = $total + $item['itemPrice'];
                     }
                     echo "$$total</td></tr></tbody></table>
-                    <a href='./?action=checkout'>Check Out</a>";
+                    <a id='checkout' href='./?action=checkout'>Check Out</a>";
                 }
                     ?>
         </fieldset>

@@ -4,10 +4,25 @@ main{
 
 main table{
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
 }
 
 main table thead{
     background-color: lightslategray;
+}
+
+main a#checkout{
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: gray;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+main table tbody tr td a{
+    color: red;
+    border: none;
 }
