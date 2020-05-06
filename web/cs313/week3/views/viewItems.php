@@ -14,7 +14,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/nav.php';?>
     <main>
         <div>
-            <figure><img src="./images/item1.jpg"></figure>
+            <figure><img src="./images/no-image.jpg"></figure>
             <figcaption>
                 <h2>Item Title</h2>
                 <p>$1.99</p>
@@ -22,7 +22,7 @@
         </figcaption>
         </div>
         <div>
-            <figure><img src="./images/item1.jpg"></figure>
+            <figure><img src="./images/no-image.jpg"></figure>
             <figcaption>
                 <h2>Item Title</h2>
                 <p>$2.99</p>
@@ -30,7 +30,7 @@
         </figcaption>
         </div>
         <div>
-            <figure><img src="./images/item1.jpg"></figure>
+            <figure><img src="./images/no-image.jpg"></figure>
             <figcaption>
                 <h2>Item Title</h2>
                 <p>$3.99</p>
@@ -38,7 +38,7 @@
         </figcaption>
         </div>
         <div>
-            <figure><img src="./images/item1.jpg"></figure>
+            <figure><img src="./images/no-image.jpg"></figure>
             <figcaption>
                 <h2>Item Title</h2>
                 <p>$4.99</p>
