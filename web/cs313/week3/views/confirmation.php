@@ -11,6 +11,7 @@
 </head>
 <body>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/header.php';?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/nav.php';?>
     <main>
         <p>Thank you for shopping with us!</p>
         <p><?php echo count($_SESSION['cart']);?> items will be shipped to </p>

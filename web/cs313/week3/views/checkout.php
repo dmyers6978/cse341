@@ -11,6 +11,7 @@
 </head>
 <body>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/header.php';?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/nav.php';?>
     <main>
         <form method="post" action="./">
         <label for="fName">First Name: </label><input type="text" name="fName" id="fName"><br>
