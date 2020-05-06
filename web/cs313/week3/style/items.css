@@ -1,7 +1,6 @@
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 80%;
     justify-content: space-around;
     height: 900px;
     padding-top: 50px;

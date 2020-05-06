@@ -172,6 +172,7 @@ header, body{
     margin: 20px auto;
     border-radius: 15px;
     padding: 10px;
+    width: 80%;
   }
 
   nav ul li:hover{
