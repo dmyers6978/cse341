@@ -14,6 +14,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/nav.php';?>
     <main>
       <h1>Shipping Information</h1>
+      <?php if(isset($_SESSION['message'])){echo $_SESSION['message'];}?>
         <form method="post" action="./">
         <label for="fName">First Name: &nbsp;</label><input type="text" name="fName" id="fName"><br>
         <label for="lName">Last Name: &nbsp;</label><input type="text" name="lName" id="lName"><br>

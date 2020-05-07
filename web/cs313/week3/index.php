@@ -28,8 +28,14 @@ switch($action){
         $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING);
         $state = filter_input(INPUT_POST, 'state', FILTER_SANITIZE_STRING);
         $zip = filter_input(INPUT_POST, 'zip', FILTER_VALIDATE_INT);
+        if(empty($fName) || empty($lName) || empty($email) || empty($address1) || empty($city) || empty($state) || empty($zip)){
+            $_SESSION['message'] = "<p>Please fill out all form fields.</p>";
+            include './views/checkout.php';
+            exit;
+        } else{
         include './views/confirmation.php';
         exit;
+        }
     break;
 
     case 'addToCart':
