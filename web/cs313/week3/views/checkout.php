@@ -20,7 +20,7 @@
         <label for="lName">Last Name: &nbsp;</label><input required type="text" name="lName" id="lName"><br>
         <label for="email">Email: &nbsp;</label><input required type="text" name="email" id="email"><br>
         <label for="address1">Address Line 1: &nbsp;</label><input required type="text" name="address1" id="address1"><br>
-        <label for="address2">Address Line 2: &nbsp;</label><input required type="text" name="address2" id="address2"><br>
+        <label for="address2">Address Line 2: &nbsp;</label><input type="text" name="address2" id="address2"><br>
         <label for="city">City: &nbsp;</label><input required type="text" name="city" id="city"><br>
         <label for="state">State: &nbsp;</label><select required name="state" id="state">
           <option value=0>Select a state</option>
