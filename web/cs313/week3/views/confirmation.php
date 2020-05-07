@@ -13,7 +13,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/header.php';?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/nav.php';?>
     <main>
-        <p>Thank you for shopping with us!</p>
+        <h1>Thank you for shopping with us!</h1>
         <p><?php echo count($_SESSION['cart']);?> items will be shipped to </p>
         <p><strong><?php echo "$fName $lName";?></strong></p>
         <?php echo "<p>$address1</p>";
