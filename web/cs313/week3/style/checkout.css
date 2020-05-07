@@ -38,3 +38,8 @@ form input:last-of-type:hover{
     color: black;
     background-color: white;
 }
+
+main p{
+    text-align: center;
+    margin: 0 auto;
+}
