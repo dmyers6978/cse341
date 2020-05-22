@@ -14,7 +14,7 @@ switch($action){
         $services = getServices();
         foreach($services as $service){
             var_dump($service);
-            $table .= "<tr><td>$service[serviceName]</td><td>$service[serviceTime]</td><td>$service[servicePrice]</td></tr>";
+            $table .= "<tr><td>$service[servicename]</td><td>$service[servicetime]</td><td>$service[serviceprice]</td></tr>";
         }
         include './views/contact.php';
         exit;
