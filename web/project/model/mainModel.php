@@ -1,5 +1,5 @@
 <?php
-require_once 'web/project/library/connections.php';
+require_once '/app/web/project/library/connections.php';
 
 function getServices(){
     $db = dbConnect();
