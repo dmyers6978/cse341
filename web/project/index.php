@@ -13,6 +13,7 @@ switch($action){
         $table = '';
         $services = getServices();
         foreach($services as $service){
+            var_dump($service);
             $table .= "<tr><td>$service[serviceName]</td><td>$service[serviceTime]</td><td>$service[servicePrice]</td></tr>";
         }
         include './views/contact.php';
