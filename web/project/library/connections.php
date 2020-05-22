@@ -1,4 +1,5 @@
 <?php
+function dbConnect(){
 try
 {
     $db = parse_url(getenv("DATABASE_URL"));
@@ -22,4 +23,5 @@ catch (PDOException $ex)
 {
   echo 'Error!: ' . $ex->getMessage();
   die();
+}
 }

@@ -6,7 +6,13 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
 switch($action){
     case 'contact':
-
+        $table = '';
+        $services = getServices();
+        foreach($services as $service){
+            $table .= "<tr><td>$service[serviceName]</td><td>$service[serviceTime]</td><td>$service[servicePrice]</td></tr>";
+        }
+        include './views/contact.php';
+        exit;
     break;
 
     case 'about':
