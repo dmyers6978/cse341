@@ -17,7 +17,7 @@ try
   // and can be very helpful in debugging! (But you would likely want
   // to disable it for production environments.)
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected.";
+//   echo "Connected.";
 }
 catch (PDOException $ex)
 {
