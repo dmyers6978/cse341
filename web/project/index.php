@@ -52,7 +52,7 @@ switch($action){
             $serviceList = getServices();
             $table .= "</select><label for='serviceId'>Select services: </label>";
             foreach($serviceList as $service){
-                $table .= "<span>$service[servicename]</span><input type='checkbox' name='services[]' value='$service[serviceid]'>";
+                $table .= "<span>$service[servicename] </span><input type='checkbox' name='services[]' value='$service[serviceid]'>";
             }
             $table .= "<input type='hidden' name='action' value='addJob'><input type='submit' value='Add Job'></form>";
         } else{
@@ -146,7 +146,7 @@ switch($action){
     case 'addJob':
         $userId = filter_input(INPUT_POST, 'userid', FILTER_VALIDATE_INT);
         $serviceId = filter_input_array(INPUT_POST, 'services');
-        var_dump($userId, $serviceId);
+        var_dump($_POST['services']);
         exit;
     break;
 
