@@ -41,6 +41,30 @@ switch($action){
         exit;
     break;
 
+    case 'Login':
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $exists = checkUserEmail($email);
+        $exists = $exists[0];
+        if(!$exists){
+            $_SESSION['message'] = "<p>We couldn't find any users with that email. <a href='./?action=register'>Click here to register</a> or try again.</p>";
+            include './views/login.php';
+            exit;
+        }
+
+        $match = password_verify($password, $exists['password']);
+        if(!$match){
+            $_SESSION['message'] = "<p>Please check your password and try again.</p>";
+            include './views/login.php';
+            exit;
+        }
+        array_pop($exists);
+        $_SESSION['loggedIn'] = TRUE;
+        $_SESSION['userData'] = $exists;
+        $_SESSION['message'] = "<p>Welcome back $exists['userfirstname'].</p>";
+    break;
+
+
     case 'register':
         include './views/register.php';
         exit;

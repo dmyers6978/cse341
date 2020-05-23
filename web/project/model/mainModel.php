@@ -25,3 +25,14 @@ function addUser($fName, $lName, $phone, $email, $password){
     $stmt->closeCursor();
     return $result;
 }
+
+function checkUserEmail($email){
+    $db = dbConnect();
+    $sql = 'SELECT userid, userfirstname, userlastname, useremail, userphonenumber, userpassword FROM users WHERE useremail = :email';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $result;
+}
