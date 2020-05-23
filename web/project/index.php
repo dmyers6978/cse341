@@ -43,7 +43,7 @@ switch($action){
                 $table .= "<tr><td>$job[userid]</td><td>$job[jobTitle]</td><td>$job[statusname]</td></tr>";
             }
             $table .= "</tbody></table>";
-            $table .= "<form method='post' action='./?action=addJob'>
+            $table .= "<form method='post' action='./'>
             <label for='userid'>Select a user: </label><select id='userid' name='userid'><option value=0>Select a user</option>";
             $userList = getusers();
             foreach($userList as $user){
@@ -54,7 +54,7 @@ switch($action){
             foreach($serviceList as $service){
                 $table .= "<span>$service[servicename]</span><input type='checkbox' name='services[]' value='$service[serviceid]>'";
             }
-            $table .= "<input type='hidden' name='action' value='addJob'><input type=submit value='Add Job'</form>";
+            $table .= "<input type='hidden' name='action' value='addJob'><input type='submit' value='Add Job'></form>";
         } else{
         $jobList = getJobs($_SESSION['userData']['userid']);
         $table = "<table><thead><tr><th>Description</th><th>Status</th></tr></thead><tbody>";
