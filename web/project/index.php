@@ -40,7 +40,7 @@ switch($action){
             $jobList = getAllJobs();
             $table = "<table><thead><tr><th>Customer</th><th>Description</th><th>status</th></tr></thead><tbody>";
             foreach($jobList as $job){
-                $table .= "<tr><td>$job[userid]</td><td>$job[jobTitle]</td><td>$job[statusname]</td></tr>";
+                $table .= "<tr><td>$job[userid]</td><td>$job[jobtitle]</td><td>$job[statusname]</td></tr>";
             }
             $table .= "</tbody></table>";
             $table .= "<form method='post' action='./'>
