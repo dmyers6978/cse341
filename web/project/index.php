@@ -46,7 +46,6 @@ switch($action){
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         $exists = checkUserEmail($email);
         $exists = $exists[0];
-        var_
         if(!$exists){
             $_SESSION['message'] = "<p>We couldn't find any users with that email. <a href='./?action=register'>Click here to register</a> or try again.</p>";
             include './views/login.php';
