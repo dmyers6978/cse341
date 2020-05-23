@@ -52,7 +52,7 @@ switch($action){
             $serviceList = getServices();
             $table .= "</select><label for='serviceId'>Select services: </label>";
             foreach($serviceList as $service){
-                $table .= "<span>$service[servicename]</span><input type='checkbox' name='services[]' value='$service[serviceid]>";
+                $table .= "<span>$service[servicename]</span><input type='checkbox' name='services[]' value='$service[serviceid]>'";
             }
             $table .= "<input type='hidden' name='action' value='addJob'><input type=submit value='Add Job'</form>";
         } else{
