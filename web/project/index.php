@@ -47,7 +47,7 @@ switch($action){
             <label for='userid'>Select a user: </label><select id='userid' name='userid'><option value=0>Select a user</option>";
             $userList = getusers();
             foreach($userList as $user){
-                $table .= "<option value='$user[userid]>$user[userfirstname] $user[userlastname]</option>";
+                $table .= "<option value='$user[userid]'>$user[userfirstname] $user[userlastname]</option>";
             }
             $serviceList = getServices();
             $table .= "</select><label for='serviceId'>Select services: </label>";
