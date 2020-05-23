@@ -1,6 +1,7 @@
 <?php
 if(!isset($_SESSION)){
     session_start();
+    $_SESSION['loggedIn'] = FALSE;
 }
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -96,6 +97,12 @@ switch($action){
             include './views/register.php';
             exit;
         }
+    break;
+
+    case 'logout':
+        session_unset();
+        session_destroy();
+        header('location: ./');
     break;
 
     default:
