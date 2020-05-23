@@ -44,13 +44,13 @@ switch($action){
             }
             $table .= "</tbody></table>";
             $table .= "<form method='post' action='./?action=addJob'>
-            <label for='userid'>Select a user: </label><select id='userid' name='userid'>";
+            <label for='userid'>Select a user: </label><select id='userid' name='userid'><option value=0>Select a user</option>";
             $userList = getusers();
             foreach($userList as $user){
                 $table .= "<option value='$user[userid]>$user[userfirstname] $user[userlastname]</option>";
             }
             $serviceList = getServices();
-            $table .= "<label for='serviceId'>Select services: </label>";
+            $table .= "</select><label for='serviceId'>Select services: </label>";
             foreach($serviceList as $service){
                 $table .= "<span>$service[servicename]</span><input type='checkbox' name='services[]' value='$service[serviceid]>";
             }
