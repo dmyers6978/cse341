@@ -20,12 +20,15 @@
             <tr>
                 <th>Service</th>
                 <th>Estimated Time (Minutes)</th>
-                <th>Estimated Cost</th>
+                <th>Estimated Cost*</th>
             </tr>
         </thead>
         <tbody>
             <?php if(isset($table)){echo $table;}?>
+            <tr><td></td><td></td><td id='total'></td></tr>
         </tbody>
+        
+        <p>*Prices are estimates. Depending on situation or parts required, prices are subject to change.</p>
     </table>
 </section>
     </main>
