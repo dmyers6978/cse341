@@ -15,11 +15,11 @@ function addUser($fName, $lName, $phone, $email, $password){
     $db = dbConnect();
     $sql = 'INSERT INTO users (userfirstname, userlastname, userphonenumber, useremail, userpassword) VALUES (:fName, :lName, :phone, :email, :password);';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue($fName, ':fName', PDO::PARAM_STR);
-    $stmt->bindValue($lName, ':lName', PDO::PARAM_STR);
-    $stmt->bindValue($phone, ':phone', PDO::PARAM_INT);
-    $stmt->bindValue($email, ':email', PDO::PARAM_STR);
-    $stmt->bindValue($password, ':password', PDO::PARAM_STR);
+    $stmt->bindValue(':fName', $fName, PDO::PARAM_STR);
+    $stmt->bindValue(':lName', $lName, PDO::PARAM_STR);
+    $stmt->bindValue(':phone', $phone, PDO::PARAM_INT);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->bindValue(':password', $password, PDO::PARAM_STR);
     $stmt->execute();
     $result = $stmt->rowCount();
     $stmt->closeCursor();
