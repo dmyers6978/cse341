@@ -41,6 +41,38 @@ switch($action){
         exit;
     break;
 
+    case 'register':
+        include './views/register.php';
+        exit;
+    break;
+
+    case 'Register':
+        $fName = filter_input(INPUT_GET, 'fName', FILTER_SANITIZE_STRING);
+        $lName = filter_input(INPUT_GET, 'lName', FILTER_SANITIZE_STRING);
+        $phone = filter_input(INPUT_GET, 'phone', FILTER_VALIDATE_INT);
+        $email = filter_input(INPUT_GET, 'email', FILTER_VALIDATE_EMAIL);
+        $password = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_STRING);
+
+        if(empty($fName) || empty($lName) || empty($phone) || empty($email) || empty($password)){
+            $_SESSION['mesage'] = "<p>Please fill out all form fields.</p>";
+            include './views/register.php';
+            exit;
+        }
+
+        $hashedPass = password_hash($password, PASSWORD_DEFAULT);
+
+        $success = addUser($fName, $lName, $phone, $email, $hashedPass);
+        if($success === 1){
+            $_SESSION['message'] = "<p>Thank you for registering $fName, please login to continue.</p>";
+            header('location: ./?action=login');
+            exit;
+        } else{
+            $_SESSION['message'] = "<p>Something went wrong, please try again later.</p>";
+            include './views/register.php';
+            exit;
+        }
+    break;
+
     default:
     include './views/home.php';
     exit;
