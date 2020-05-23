@@ -85,7 +85,7 @@ function getJobId($jobTitle, $userId){
     $sql = 'SELECT * FROM jobs WHERE userid = :userId AND jobtitle = :jobTitle';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':userId', $userId, PDO::PARAM_STR);
-    $stmt->bindValue(':jobTItle', $jobTitle, PDO::PARAM_STR);
+    $stmt->bindValue(':jobTitle', $jobTitle, PDO::PARAM_STR);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
