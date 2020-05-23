@@ -15,6 +15,7 @@
     </nav>
     <main>
 <section>
+      <h2>Services I provide</h2>
     <table>
         <thead>
             <tr>
@@ -27,10 +28,15 @@
             <?php if(isset($table)){echo $table;}?>
             <tr><td></td><td></td><td id='total'></td></tr>
         </tbody>
-        
-        <p>*Prices are estimates. Depending on situation or parts required, prices are subject to change.</p>
     </table>
+    <p>*Prices are estimates. Depending on situation or parts required, prices are subject to change.</p>
 </section>
+    <section>
+    <h1>Contact me for more info</h1>  
+    <p>1213 Center St. Rear</p>
+    <p>Evanston WY 82930</p><a href="tel:30077995311">Call Me</a>
+    <a href="./?action=email">Email Me</a>
+  </section>
     </main>
     <script src="./scripts/cost.js"></script>
 </body>
