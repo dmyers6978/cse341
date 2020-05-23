@@ -9,7 +9,7 @@
 <body>
     <main>
     <section>
-      <?php if(isset($_SESSION['mesasge'])){echo $_SESSION['message'];}?>
+      <?php if(isset($_SESSION['message'])){echo $_SESSION['message'];}?>
         <form action="./" method="get">
         <label for="email">Email: </label>
         <input type="email" name="email" id="email" required>
