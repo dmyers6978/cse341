@@ -70,7 +70,7 @@ function getUsers(){
 
 function addJob($jobTitle, $userId){
     $db = dbConnect();
-    $sql = 'INSERT INTO jobs (jobTitle, userId) VALUES (:jobTitle, userId);';
+    $sql = 'INSERT INTO jobs (jobTitle, userId) VALUES (:jobTitle, :userId);';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':jobTitle', $jobTitle, PDO::PARAM_STR);
     $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
