@@ -38,9 +38,14 @@ switch($action){
         }
         if($_SESSION['userData']['userlevel'] === 2){
             $jobList = getAllJobs();
+            $statusList = getStatusList();
             $table = "<table><thead><tr><th>Customer</th><th>Description</th><th>status</th></tr></thead><tbody>";
             foreach($jobList as $job){
-                $table .= "<tr><td>$job[userid]</td><td>$job[jobtitle]</td><td>$job[statusname]</td></tr>";
+                $table .= "<tr><td>$job[userid]</td><td>$job[jobtitle]</td><td>$job[statusname]<form method='post' action='./'><select name='statusId'><option value='0'>Select an option</option>";
+                foreach($statusList as $status){
+                    $table .= "<option value='$status[statusid]'>$status[statusname]</option>";
+                }
+                $table .= "</select><input type='hidden' name='action' value='editStatus'><input type='hidden' name='jobId' value='$job[jobid]'><input type='submit' value='Change Status'></form></td></tr>";
             }
             $table .= "</tbody></table>";
             $table .= "<form method='post' action='./'>
@@ -157,6 +162,13 @@ switch($action){
         }
         header('location: ./?action=status');
         exit;
+    break;
+
+    case 'editStatus':
+        $statusId = filter_input(INPUT_POST, 'statusId', FILTER_VALIDATE_INT);
+        $jobId = filter_input(INPUT_POST, 'jobId', FILTER_VALIDATE_INT);
+        $success = updateJob($statusId, $jobId);
+        header('location: ./?action=status');
     break;
 
     default:

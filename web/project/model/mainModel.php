@@ -103,3 +103,25 @@ function addJobService($jobId, $serviceId){
     $stmt->closeCursor();
     return $result;
 }
+
+function getStatusList(){
+    $db = dbConnect();
+    $sql = 'SELECT * FROM status';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $result;
+}
+
+function updateJob($statusId, $jobId){
+    $db = dbConnect();
+    $sql = 'UPDATE jobs SET statusid = :statusId WHERE jobid = :jobId;';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':statusId', $statusId, PDO::PARAM_INT);
+    $stmt->bindValue(':jobId', $jobId, PDO::PARAM_INT);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $result;
+}
