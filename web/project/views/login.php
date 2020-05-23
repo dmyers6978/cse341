@@ -16,6 +16,7 @@
         <label for="password">Password: </label>
         <input type="password" name="password" id="password" required>
     </form>
+    <a href="./?action=register">Don't have a login? Register here.</a>
     </section>
     </main>
 </body>
