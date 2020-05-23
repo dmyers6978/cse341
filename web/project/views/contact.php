@@ -32,5 +32,6 @@
     </table>
 </section>
     </main>
+    <script src="./scripts/cost.js"></script>
 </body>
 </html>

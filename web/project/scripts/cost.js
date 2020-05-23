@@ -1,9 +1,10 @@
 var total = 0;
 function addCost(x){
-    if(x.value == TRUE){
-        total = total + x.name;
+    console.log(x.innerHTML);
+    if(x.checked){
+        total = total + x.innerHTML;
     } else{
-        total = total - x.name;
+        total = total - x.innerHTML;
     }
     document.getElementById('total').innerHTML = "Total: " + total;
 }
