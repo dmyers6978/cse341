@@ -36,3 +36,24 @@ function checkUserEmail($email){
     $stmt->closeCursor();
     return $result;
 }
+
+function getAllJobs(){
+    $db = dbConnect();
+    $sql = 'SELECT * FROM jobs;';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $result;
+}
+
+function getJobs($userId){
+    $db = dbConnect();
+    $sql = 'SELECT * FROM jobs WHERE userid = :userId';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userId', $userId, PDO::PARAM_STR);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $result;
+}

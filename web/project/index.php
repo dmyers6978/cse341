@@ -36,6 +36,12 @@ switch($action){
             header('location: ./?action=login');
             exit;
         }
+        if($_SESSION['userData']['userlevel'] === 2){
+            $jobList = getAllJobs();
+        } else{
+        $jobList = getJobs($_SESSION['userData']['userId']);
+        }
+        echo $jobList;
 
     break;
 
