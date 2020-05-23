@@ -49,7 +49,7 @@ function getAllJobs(){
 
 function getJobs($userId){
     $db = dbConnect();
-    $sql = 'SELECT * FROM jobs JOIN jobservice USING(jobid) JOIN services USING(serviceid) WHERE userid = :userId';
+    $sql = 'SELECT * FROM jobs JOIN status USING(statusid) WHERE userid = :userId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':userId', $userId, PDO::PARAM_STR);
     $stmt->execute();

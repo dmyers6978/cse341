@@ -60,7 +60,7 @@ switch($action){
         $jobList = getJobs($_SESSION['userData']['userid']);
         $table = "<table><thead><tr><th>Description</th><th>Status</th></tr></thead><tbody>";
         foreach($jobList as $job){
-            $table .= "<tr><td>$job[jobTitle]</td><td>$job[statusname]</td></tr>";
+            $table .= "<tr><td>$job[jobtitle]</td><td>$job[statusname]</td></tr>";
         }
         $table .= "</tbody></table>";
         }
