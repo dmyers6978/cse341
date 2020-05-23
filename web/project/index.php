@@ -41,7 +41,7 @@ switch($action){
         } else{
         $jobList = getJobs($_SESSION['userData']['userid']);
         }
-        echo $jobList;
+        var_dump($jobList);
 
     break;
 
@@ -71,7 +71,14 @@ switch($action){
         $_SESSION['loggedIn'] = TRUE;
         $_SESSION['userData'] = $exists;
         $_SESSION['message'] = "<p>Welcome back $exists[userfirstname].</p>";
+        if(isset($_SESSIO['location'])){
+            $location = "location: $_SESSION[location]";
+            header($location);
+            exit;
+        } else{
         header('location: ./');
+        exit;
+        }
     break;
 
 
