@@ -61,7 +61,8 @@ switch($action){
         array_pop($exists);
         $_SESSION['loggedIn'] = TRUE;
         $_SESSION['userData'] = $exists;
-        $_SESSION['message'] = "<p>Welcome back $exists['userfirstname'].</p>";
+        $_SESSION['message'] = "<p>Welcome back $exists[userfirstname].</p>";
+        header('location: ./');
     break;
 
 
