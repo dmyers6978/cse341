@@ -14,6 +14,10 @@
         <?php include './common/nav.php';?>
     </nav>
     <main>
+        <?php if(isset($_SESSION['message'])){
+            echo $_SESSION['message'];
+        }
+        ?>
     <section>
         <figure><img src="" alt="repair"></figure>
         <figcaption><a href="./?action=contact">Need a repair?</a></figcaption>
