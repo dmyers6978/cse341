@@ -144,8 +144,8 @@ switch($action){
     break;
 
     case 'addJob':
-        $userId = filter_input(INPUT_POST, 'userId', FILTER_VALIDATE_INT);
-        $serviceId = filter_input(INPUT_POST, 'serviceId', FILTER_REQUIRE_ARRAY);
+        $userId = filter_input(INPUT_POST, 'userid', FILTER_VALIDATE_INT);
+        $serviceId = filter_input(INPUT_POST, 'services', FILTER_REQUIRE_ARRAY);
         var_dump($userId, $serviceId);
         exit;
     break;
