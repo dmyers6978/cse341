@@ -1,4 +1,4 @@
-op<?php
+<?php
 if(!isset($_SESSION)){
     session_start();
 }
@@ -38,7 +38,7 @@ switch($action){
         }
         if($_SESSION['userData']['userlevel'] === 2){
             $jobList = getAllJobs();
-            $table = "<table><thead><tr><th>Customer</th><th>Description</th><td>status</td></tr></thead><tbody>";
+            $table = "<table><thead><tr><th>Customer</th><th>Description</th><th>status</th></tr></thead><tbody>";
             foreach($jobList as $job){
                 $table .= "<tr><td>$job[userid]</td><td>$job[jobTitle]</td><td>$job[statusname]</td></tr>";
             }
@@ -141,6 +141,13 @@ switch($action){
         session_unset();
         session_destroy();
         header('location: ./');
+    break;
+
+    case 'addJob':
+        $userId = filter_input(INPUT_POST, 'userId', FILTER_VALIDATE_INT);
+        $serviceId = filter_input(INPUT_POST, 'serviceId', FILTER_REQUIRE_ARRAY);
+        var_dump($userId, $serviceId);
+        exit;
     break;
 
     default:
