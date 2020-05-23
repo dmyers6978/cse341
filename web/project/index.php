@@ -44,6 +44,7 @@ switch($action){
             }
             $table .= "</tbody></table>";
             $table .= "<form method='post' action='./'>
+            <label for='jobTitle'>Description: </label><input type='text' name='jobTitle' id='jobTitle'>
             <label for='userid'>Select a user: </label><select id='userid' name='userid'><option value=0>Select a user</option>";
             $userList = getusers();
             foreach($userList as $user){
@@ -144,9 +145,17 @@ switch($action){
     break;
 
     case 'addJob':
+        $jobTitle = filter_input(INPUT_POST, 'jobTitle', FILTER_SANITIZE_STRING);
         $userId = filter_input(INPUT_POST, 'userid', FILTER_VALIDATE_INT);
         $serviceId = filter_input(INPUT_POST, 'services', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
-        var_dump($serviceId);
+
+        $success = addJob($jobTitle, $userId);
+        var_dump($success);
+        $jobId = getJobId($jobTitle, $userId);
+        foreach($serviceId as $service){
+        $success = addJobService($jobId, $service);
+        var_dump($success);
+        }
         exit;
     break;
 
