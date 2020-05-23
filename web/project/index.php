@@ -150,14 +150,12 @@ switch($action){
         $serviceId = filter_input(INPUT_POST, 'services', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
 
         $success = addJob($jobTitle, $userId);
-        var_dump($success);
         $jobId = getJobId($jobTitle, $userId);
         $jobId = $jobId[0]['jobid'];
         foreach($serviceId as $service){
-            var_dump($service);
         $success = addJobService($jobId, $service);
-        var_dump($success);
         }
+        header('location: ./?action=status');
         exit;
     break;
 
