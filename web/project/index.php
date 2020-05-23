@@ -152,6 +152,7 @@ switch($action){
         $success = addJob($jobTitle, $userId);
         var_dump($success);
         $jobId = getJobId($jobTitle, $userId);
+        $jobId = $jobId[0];
         foreach($serviceId as $service){
             var_dump($service);
         $success = addJobService($jobId, $service);
