@@ -28,7 +28,7 @@ function addUser($fName, $lName, $phone, $email, $password){
 
 function checkUserEmail($email){
     $db = dbConnect();
-    $sql = 'SELECT userid, userfirstname, userlastname, useremail, userphonenumber, userpassword FROM users WHERE useremail = :email';
+    $sql = 'SELECT userid, userfirstname, userlastname, useremail, userphonenumber, userlevel, userpassword FROM users WHERE useremail = :email';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $stmt->execute();

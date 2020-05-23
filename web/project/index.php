@@ -39,7 +39,7 @@ switch($action){
         if($_SESSION['userData']['userlevel'] === 2){
             $jobList = getAllJobs();
         } else{
-        $jobList = getJobs($_SESSION['userData']['userId']);
+        $jobList = getJobs($_SESSION['userData']['userid']);
         }
         echo $jobList;
 
