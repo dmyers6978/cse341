@@ -47,11 +47,11 @@ switch($action){
     break;
 
     case 'Register':
-        $fName = filter_input(INPUT_GET, 'fName', FILTER_SANITIZE_STRING);
-        $lName = filter_input(INPUT_GET, 'lName', FILTER_SANITIZE_STRING);
-        $phone = filter_input(INPUT_GET, 'phone', FILTER_VALIDATE_INT);
-        $email = filter_input(INPUT_GET, 'email', FILTER_VALIDATE_EMAIL);
-        $password = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_STRING);
+        $fName = filter_input(INPUT_POST, 'fName', FILTER_SANITIZE_STRING);
+        $lName = filter_input(INPUT_POST, 'lName', FILTER_SANITIZE_STRING);
+        $phone = filter_input(INPUT_POST, 'phone', FILTER_VALIDATE_INT);
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
         if(empty($fName) || empty($lName) || empty($phone) || empty($email) || empty($password)){
             $_SESSION['mesage'] = "<p>Please fill out all form fields.</p>";
