@@ -15,6 +15,8 @@
         <input type="email" name="email" id="email" required>
         <label for="password">Password: </label>
         <input type="password" name="password" id="password" required>
+        <input type="hidden" name="action" value="Login">
+        <input type="submit" value="Login">
     </form>
     <a href="./?action=register">Don't have a login? Register here.</a>
     </section>
