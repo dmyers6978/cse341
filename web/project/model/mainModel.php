@@ -39,7 +39,7 @@ function checkUserEmail($email){
 
 function getAllJobs(){
     $db = dbConnect();
-    $sql = 'SELECT * FROM jobs;';
+    $sql = 'SELECT * FROM jobs JOIN jobservice USING(jobid) JOIN services USING(serviceid);';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -49,9 +49,19 @@ function getAllJobs(){
 
 function getJobs($userId){
     $db = dbConnect();
-    $sql = 'SELECT * FROM jobs WHERE userid = :userId';
+    $sql = 'SELECT * FROM jobs JOIN jobservice USING(jobid) JOIN services USING(serviceid) WHERE userid = :userId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':userId', $userId, PDO::PARAM_STR);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $result;
+}
+
+function getUsers(){
+    $db = dbConnect();
+    $sql = 'SELECT userfirstname, userlastname, userid FROM users ORDER BY userlastname ASC, userfirstname ASC;';
+    $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();

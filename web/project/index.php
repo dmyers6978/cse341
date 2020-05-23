@@ -1,4 +1,4 @@
-<?php
+op<?php
 if(!isset($_SESSION)){
     session_start();
 }
@@ -38,10 +38,33 @@ switch($action){
         }
         if($_SESSION['userData']['userlevel'] === 2){
             $jobList = getAllJobs();
+            $table = "<table><thead><tr><th>Customer</th><th>Description</th><td>status</td></tr></thead><tbody>";
+            foreach($jobList as $job){
+                $table .= "<tr><td>$job[userid]</td><td>$job[jobTitle]</td><td>$job[statusname]</td></tr>";
+            }
+            $table .= "</tbody></table>";
+            $table .= "<form method='post' action='./?action=addJob'>
+            <label for='userid'>Select a user: </label><select id='userid' name='userid'>";
+            $userList = getusers();
+            foreach($userList as $user){
+                $table .= "<option value='$user[userid]>$user[userfirstname] $user[userlastname]</option>";
+            }
+            $serviceList = getServices();
+            $table .= "<label for='serviceId'>Select services: </label>";
+            foreach($serviceList as $service){
+                $table .= "<span>$service[servicename]</span><input type='checkbox' name='services[]' value='$service[serviceid]>";
+            }
+            $table .= "<input type='hidden' name='action' value='addJob'><input type=submit value='Add Job'</form>";
         } else{
         $jobList = getJobs($_SESSION['userData']['userid']);
+        $table = "<table><thead><tr><th>Description</th><th>Status</th></tr></thead><tbody>";
+        foreach($jobList as $job){
+            $table .= "<tr><td>$job[jobTitle]</td><td>$job[statusname]</td></tr>";
         }
-        var_dump($jobList);
+        $table .= "</tbody></table>";
+        }
+        include './views/jobs.php';
+        exit;
 
     break;
 
