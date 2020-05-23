@@ -1,10 +1,19 @@
 var total = 0;
 function addCost(x){
-    console.log(x.innerHTML);
+    var y = parseInt(getLabel(x));
+    console.log(y);
     if(x.checked){
-        total = total + x.innerHTML;
+        total = total + y;
     } else{
-        total = total - x.innerHTML;
+        total = total - y;
     }
-    document.getElementById('total').innerHTML = "Total: " + total;
+    document.getElementById('total').innerHTML = "Total: $" + total;
+}
+
+function getLabel(x){
+    var y = document.getElementsByTagName('label');
+    for( var i = 0; i < y.length; i++ ) {
+        if (y[i].htmlFor == x.id)
+             return y[i].innerHTML;
+     }
 }

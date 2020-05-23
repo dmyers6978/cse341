@@ -13,7 +13,7 @@ switch($action){
         $table = '';
         $services = getServices();
         foreach($services as $service){
-            $table .= "<tr><td>$service[servicename]</td><td>$service[servicetime]</td><td><label for='$service[serviceid]'>$service[serviceprice]</label>&nbsp;<input type='checkbox' id='$service[serviceid]' onchange='addCost(this)'></td></tr>";
+            $table .= "<tr><td>$service[servicename]</td><td>$service[servicetime]</td><td>$<label for='$service[serviceid]'>$service[serviceprice]</label>&nbsp;<input type='checkbox' id='$service[serviceid]' onchange='addCost(this)'></td></tr>";
         }
         include './views/contact.php';
         exit;

@@ -1,0 +1,37 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>[Name here] | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./style/common.css">
+  </head>
+  <body>
+      <header>
+              </header>
+      <nav>
+          <ul>
+      <li><a href="./">Home</a></li>
+      <li><a href="./?action=contact">Contact Me</a></li>
+      <li><a href="./?action=status">Bike Status</a></li>
+      <li><a href="./?action=about">About Me</a></li>
+  </ul>    </nav>
+      <main>
+  <section>
+      <p>*Prices are estimates. Depending on situation or parts required, prices are subject to change.</p><table>
+          <thead>
+              <tr>
+                  <th>Service</th>
+                  <th>Estimated Time (Minutes)</th>
+                  <th>Estimated Cost*</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr><td>Brake Adjustment</td><td>30</td><td><label for="1">5.00</label>&nbsp;<input type="checkbox" id="1" onchange="addCost(this)"></td></tr><tr><td>Cable Repair</td><td>30</td><td><label for="4">5.00</label>&nbsp;<input type="checkbox" id="4" onchange="addCost(this)"></td></tr><tr><td>Cassette Replacement</td><td>30</td><td><label for="6">5.00</label>&nbsp;<input type="checkbox" id="6" onchange="addCost(this)"></td></tr><tr><td>Chain Replacement</td><td>30</td><td><label for="7">5.00</label>&nbsp;<input type="checkbox" id="7" onchange="addCost(this)"></td></tr><tr><td>Derailleur Adjustment</td><td>30</td><td><label for="2">5.00</label>&nbsp;<input type="checkbox" id="2" onchange="addCost(this)"></td></tr><tr><td>Tire/Inner Tube repair</td><td>30</td><td><label for="3">5.00</label>&nbsp;<input type="checkbox" id="3" onchange="addCost(this)"></td></tr><tr><td>Bearing Overhaul</td><td>60</td><td><label for="5">10.00</label>&nbsp;<input type="checkbox" id="5" onchange="addCost(this)"></td></tr>            <tr><td></td><td></td><td id="total">Total: 0</td></tr>
+          </tbody>
+          
+          
+      </table>
+  </section>
+      </main>
+      <script src="./scripts/cost.js"></script>
+  
+  </body></html>
