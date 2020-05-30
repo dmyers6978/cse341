@@ -41,7 +41,7 @@ switch($action){
             $statusList = getStatusList();
             $table = "<table><thead><tr><th>Customer</th><th>Description</th><th>status</th></tr></thead><tbody>";
             foreach($jobList as $job){
-                $table .= "<tr><td>$job[userid]</td><td>$job[jobtitle]</td><td>$job[statusname]<form method='post' action='./'><select name='statusId'><option value='0'>Select an option</option>";
+                $table .= "<tr><td>$job[userfirstname] $job[userlastname]</td><td>$job[jobtitle]</td><td>$job[statusname]<form method='post' action='./'><select name='statusId'><option value='0'>Select an option</option>";
                 foreach($statusList as $status){
                     $table .= "<option value='$status[statusid]'>$status[statusname]</option>";
                 }
