@@ -39,7 +39,7 @@ function checkUserEmail($email){
 
 function getAllJobs(){
     $db = dbConnect();
-    $sql = 'SELECT * FROM jobs JOIN status USING(statusid) JOIN user USING(userid);';
+    $sql = 'SELECT * FROM jobs JOIN status USING(statusid) JOIN users USING(userid);';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
