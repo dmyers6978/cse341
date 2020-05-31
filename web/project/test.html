@@ -3,27 +3,37 @@
     <title>[Name here] | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="./style/common.css">
-    <link rel="stylesheet" type="text/css" href="./style/jobs.css">
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
   </head>
   <body>
       <header>
           <span>Welcome back Dustin | </span><a href="./?action=logout">Log Out</a>    </header>
       <nav id="navBar" class="hide">
-        <div class="container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
-          <ul id="topNav" class="hide">
+          
+  <div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <ul id="topNav" class="hide">
       <li><a href="./">Home</a></li>
       <li><a href="./?action=contact">Contact Me</a></li>
       <li><a href="./?action=status">Bike Status</a></li>
       <li><a href="./?action=about">About Me</a></li>
   </ul>    </nav>
       <main>
-          <p>Welcome back Dustin.</p>        <table><thead><tr><th>Customer</th><th>Description</th><th>status</th></tr></thead><tbody><tr><td>Test User</td><td>Red bike</td><td>Complete<form method="post" action="./"><select name="statusId"><option value="0">Select an option</option><option value="1">Pending Pickup</option><option value="2">Complete</option><option value="3">Being Worked On</option><option value="4">Waiting For Parts</option><option value="5">Waiting In Line</option><option value="6">Picked up</option></select><input type="hidden" name="action" value="editStatus"><input type="hidden" name="jobId" value="11"><input type="submit" value="Change Status"></form></td></tr><tr><td>Dustin Myers</td><td>Test</td><td>Complete<form method="post" action="./"><select name="statusId"><option value="0">Select an option</option><option value="1">Pending Pickup</option><option value="2">Complete</option><option value="3">Being Worked On</option><option value="4">Waiting For Parts</option><option value="5">Waiting In Line</option><option value="6">Picked up</option></select><input type="hidden" name="action" value="editStatus"><input type="hidden" name="jobId" value="9"><input type="submit" value="Change Status"></form></td></tr><tr><td>Dustin Myers</td><td>Test2</td><td>Complete<form method="post" action="./"><select name="statusId"><option value="0">Select an option</option><option value="1">Pending Pickup</option><option value="2">Complete</option><option value="3">Being Worked On</option><option value="4">Waiting For Parts</option><option value="5">Waiting In Line</option><option value="6">Picked up</option></select><input type="hidden" name="action" value="editStatus"><input type="hidden" name="jobId" value="10"><input type="submit" value="Change Status"></form></td></tr><tr><td>Dustin Myers</td><td></td><td>Picked up<form method="post" action="./"><select name="statusId"><option value="0">Select an option</option><option value="1">Pending Pickup</option><option value="2">Complete</option><option value="3">Being Worked On</option><option value="4">Waiting For Parts</option><option value="5">Waiting In Line</option><option value="6">Picked up</option></select><input type="hidden" name="action" value="editStatus"><input type="hidden" name="jobId" value="12"><input type="submit" value="Change Status"></form></td></tr></tbody></table><form method="post" action="./">
-              <div><label for="jobTitle">Description: </label><input type="text" name="jobTitle" id="jobTitle"></div>
-              <div><label for="userid">Select a user: </label><select id="userid" name="userid"><option value="0">Select a user</option><option value="1">Dustin Myers</option><option value="2">Test User</option></select></div><label for="serviceId">Select services: </label><div><span>Brake Adjustment </span><input type="checkbox" name="services[]" value="1"></div><div><span>Cable Repair </span><input type="checkbox" name="services[]" value="4"></div><div><span>Cassette Replacement </span><input type="checkbox" name="services[]" value="6"></div><div><span>Chain Replacement </span><input type="checkbox" name="services[]" value="7"></div><div><span>Derailleur Adjustment </span><input type="checkbox" name="services[]" value="2"></div><div><span>Tire/Inner Tube repair </span><input type="checkbox" name="services[]" value="3"></div><div><span>Bearing Overhaul </span><input type="checkbox" name="services[]" value="5"></div><input type="hidden" name="action" value="addJob"><input type="submit" value="Add Job"></form>    </main>
-              <script src="./scripts/navButton.js"></script>
+          <p>Welcome back Dustin.</p>
+          <div>
+            <img src="" alt="repair" id="first">
+            <section id="second"><a href="./?action=contact"><p>Hit the trail too hard?</p><p>I have the tools and experience to get you back on the trail.</p></a></section>
+            <section id="third"><a href="./?action=status"><p>Already dropped off your bike?</p><p>Go here to see the status of your bike.</p></a></section>
+            <img src="" alt="status" id="fourth">
+            <img src="" alt="FB" id="fifth">
+            <section id="sixth"><a href="https://www.facebook.com/groups/606194506596284t"><p>Love Mountain biking?</p><p>So do I. Join my facebook group to find others as well.</p></a></section>
+            <section id="seventh"><a href="./?action=about"><p>Still skeptical?</p><p>Click here to know more about my origins and backstory.</p></a></section>
+            <img src="" alt="About" id="eighth">
+    </div>
+      </main>
+      <script src="./scripts/navButton.js"></script>
   
   </body></html>

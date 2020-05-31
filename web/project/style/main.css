@@ -1,0 +1,123 @@
+main{
+    width: 80%;
+    margin: 25px auto 50px auto;
+    text-align: center;
+}
+
+main div{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+section{
+    width: 100%;
+    height: 250px;
+}
+
+main div section:nth-of-type(1){
+    background: rgb(160,50,50);
+}
+
+main div section:nth-of-type(2){
+    background: rgb(50,50,100);
+}
+
+main div section:nth-of-type(3){
+    background: rgb(50,100,50);
+}
+
+main div section:nth-of-type(4){
+    background: rgb(160,100,50);
+}
+
+main p{
+    margin: 25px auto;
+    font-size: 1.5rem;
+}
+
+main section a{
+    text-decoration: none;
+    color: white;
+}
+
+main section a p:first-of-type{
+    font-size: 1.5rem;
+}
+
+main section a p:last-of-type{
+    font-size: 1.0rem;
+}
+
+#first{
+    order: 2;
+}
+
+#second{
+    order: 1;
+}
+
+#third{
+    order: 3
+}
+
+#fourth{
+    order: 4
+}
+
+#fifth{
+    order: 6;
+}
+
+#sixth{
+    order: 5;
+}
+
+#seventh{
+    order: 7;
+}
+
+#eighth{
+    order: 8;
+}
+
+main div img{
+    height: 250px;
+}
+
+@media only screen and (min-width: 800px) {
+    main div{
+        grid-template-columns: 1fr 1fr;
+    }
+    #first{
+        order: 1;
+    }
+    
+    #second{
+        order: 2;
+    }
+    
+    #third{
+        order: 3
+    }
+    
+    #fourth{
+        order: 4
+    }
+    
+    #fifth{
+        order: 5;
+    }
+    
+    #sixth{
+        order: 6;
+    }
+    
+    #seventh{
+        order: 7;
+    }
+    
+    #eighth{
+        order: 8;
+    }
+}
+
