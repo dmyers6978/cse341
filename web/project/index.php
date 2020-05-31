@@ -171,6 +171,12 @@ switch($action){
         header('location: ./?action=status');
     break;
 
+    case 'email':
+        $_SESSION['message'] = "<p>The email feature is still under construction.</p>";
+        header('location: ./');
+        exit;
+    break;
+
     default:
     include './views/home.php';
     exit;
