@@ -47,7 +47,7 @@ switch($action){
                 foreach($statusList as $status){
                     $table .= "<option value='$status[statusid]'>$status[statusname]</option>";
                 }
-                $table .= "</select><input type='hidden' name='action' value='editStatus'><input type='hidden' name='jobId' value='$job[jobid]'><input type='submit' value='Change Status'></form></td><td>$job[datetime]</td></tr>";
+                $table .= "</select><input type='hidden' name='action' value='editStatus'><input type='hidden' name='jobId' value='$job[jobid]'><input type='submit' value='Change Status'></form></td><td>".date_format($job['datetime'], 'd-m-Y H:i:s')."</td></tr>";
             }
             $table .= "</tbody></table>";
             $table .= "<form method='post' action='./'>
