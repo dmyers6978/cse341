@@ -41,13 +41,13 @@ switch($action){
         if($_SESSION['userData']['userlevel'] === 2){
             $jobList = getAllJobs();
             $statusList = getStatusList();
-            $table = "<table><thead><tr><th>Customer</th><th>Description</th><th>status</th></tr></thead><tbody>";
+            $table = "<table><thead><tr><th>Customer</th><th>Description</th><th>status</th><th>Dropped Off</th></tr></thead><tbody>";
             foreach($jobList as $job){
                 $table .= "<tr><td>$job[userfirstname] $job[userlastname]</td><td>$job[jobtitle]</td><td>$job[statusname]<form method='post' action='./'><select name='statusId'><option value='0'>Select an option</option>";
                 foreach($statusList as $status){
                     $table .= "<option value='$status[statusid]'>$status[statusname]</option>";
                 }
-                $table .= "</select><input type='hidden' name='action' value='editStatus'><input type='hidden' name='jobId' value='$job[jobid]'><input type='submit' value='Change Status'></form></td></tr>";
+                $table .= "</select><input type='hidden' name='action' value='editStatus'><input type='hidden' name='jobId' value='$job[jobid]'><input type='submit' value='Change Status'></form></td><td>$job[datetime]</td></tr>";
             }
             $table .= "</tbody></table>";
             $table .= "<form method='post' action='./'>
