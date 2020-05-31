@@ -10,7 +10,7 @@
     <header>
         <?php include './common/header.php';?>
     </header>
-    <nav>
+    <nav id='navBar' class="hide">
         <?php include './common/nav.php';?>
     </nav>
     <main>
@@ -39,5 +39,6 @@
   </section>
     </main>
     <script src="./scripts/cost.js"></script>
+    <script src="./scripts/navButton.js"></script>
 </body>
 </html>

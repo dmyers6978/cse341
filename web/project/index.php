@@ -49,16 +49,16 @@ switch($action){
             }
             $table .= "</tbody></table>";
             $table .= "<form method='post' action='./'>
-            <label for='jobTitle'>Description: </label><input type='text' name='jobTitle' id='jobTitle'>
-            <label for='userid'>Select a user: </label><select id='userid' name='userid'><option value=0>Select a user</option>";
+            <div><label for='jobTitle'>Description: </label><input type='text' name='jobTitle' id='jobTitle'></div>
+            <div><label for='userid'>Select a user: </label><select id='userid' name='userid'><option value=0>Select a user</option>";
             $userList = getusers();
             foreach($userList as $user){
                 $table .= "<option value='$user[userid]'>$user[userfirstname] $user[userlastname]</option>";
             }
             $serviceList = getServices();
-            $table .= "</select><label for='serviceId'>Select services: </label>";
+            $table .= "</select></div><div><label for='serviceId'>Select services: </label>";
             foreach($serviceList as $service){
-                $table .= "<span>$service[servicename] </span><input type='checkbox' name='services[]' value='$service[serviceid]'>";
+                $table .= "<span>$service[servicename] </span><input type='checkbox' name='services[]' value='$service[serviceid]'></div>";
             }
             $table .= "<input type='hidden' name='action' value='addJob'><input type='submit' value='Add Job'></form>";
         } else{
