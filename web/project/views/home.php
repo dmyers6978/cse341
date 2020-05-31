@@ -33,3 +33,4 @@
     <script src="./scripts/navButton.js"></script>
 </body>
 </html>
+<?php unset($_SESSION['message']);?>
