@@ -26,7 +26,9 @@ switch($action){
     break;
 
     case 'about':
-    
+        $_SESSION['message'] = "<p>The About Me page is still under construction.</p>";
+        header('location: ./');
+        exit;
     break;
 
     case 'status':
