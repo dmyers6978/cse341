@@ -1,39 +1,29 @@
+<!DOCTYPE html>
 <html><head>
-    <meta charset="utf-8">
-    <title>[Name here] | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="./style/common.css">
-    <link rel="stylesheet" type="text/css" href="./style/main.css">
-  </head>
-  <body>
-      <header>
-          <span>Welcome back Dustin | </span><a href="./?action=logout">Log Out</a>    </header>
-      <nav id="navBar" class="hide">
-          
-  <div class="container" onclick="myFunction(this)">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-  </div>
-  <ul id="topNav" class="hide">
-      <li><a href="./">Home</a></li>
-      <li><a href="./?action=contact">Contact Me</a></li>
-      <li><a href="./?action=status">Bike Status</a></li>
-      <li><a href="./?action=about">About Me</a></li>
-  </ul>    </nav>
-      <main>
-          <p>Welcome back Dustin.</p>
-          <div>
-            <img src="" alt="repair" id="first">
-            <section id="second"><a href="./?action=contact"><p>Hit the trail too hard?</p><p>I have the tools and experience to get you back on the trail.</p></a></section>
-            <section id="third"><a href="./?action=status"><p>Already dropped off your bike?</p><p>Go here to see the status of your bike.</p></a></section>
-            <img src="" alt="status" id="fourth">
-            <img src="" alt="FB" id="fifth">
-            <section id="sixth"><a href="https://www.facebook.com/groups/606194506596284t"><p>Love Mountain biking?</p><p>So do I. Join my facebook group to find others as well.</p></a></section>
-            <section id="seventh"><a href="./?action=about"><p>Still skeptical?</p><p>Click here to know more about my origins and backstory.</p></a></section>
-            <img src="" alt="About" id="eighth">
-    </div>
-      </main>
-      <script src="./scripts/navButton.js"></script>
-  
-  </body></html>
+  <meta charset="utf-8">
+  <title>[Name here] | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="./style/common.css">
+  <link rel="stylesheet" type="text/css" href="./style/login.css">
+</head>
+<body>
+    <main>
+    <section>
+              <form action="./" method="post">
+                <div>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAUBJREFUOBGVVE2ORUAQLvIS4gwzEysHkHgnkMiEc4zEJXCMNwtWTmDh3UGcYoaFhZUFCzFVnu4wIaiE+vvq6+6qTgthGH6O4/jA7x1OiCAIPwj7CoLgSXDxSjEVzAt9k01CBKdWfsFf/2WNuEwc2YqigKZpK9glAlVVwTTNbQJZlnlCkiTAZnF/mePB2biRdhwHdF2HJEmgaRrwPA+qqoI4jle5/8XkXzrCFoHg+/5ICdpm13UTho7Q9/0WnsfwiL/ouHwHrJgQR8WEwVG+oXpMPaDAkdzvd7AsC8qyhCiKJjiRnCKwbRsMw9hcQ5zv9maSBeu6hjRNYRgGFuKaCNwjkjzPoSiK1d1gDDecQobOBwswzabD/D3Np7AHOIrvNpHmPI+Kc2RZBm3bcp8wuwSIot7QQ0PznoR6wYSK0Xb/AGVLcWwc7Ng3AAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+        </div>
+        <div>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAUBJREFUOBGVVE2ORUAQLvIS4gwzEysHkHgnkMiEc4zEJXCMNwtWTmDh3UGcYoaFhZUFCzFVnu4wIaiE+vvq6+6qTgthGH6O4/jA7x1OiCAIPwj7CoLgSXDxSjEVzAt9k01CBKdWfsFf/2WNuEwc2YqigKZpK9glAlVVwTTNbQJZlnlCkiTAZnF/mePB2biRdhwHdF2HJEmgaRrwPA+qqoI4jle5/8XkXzrCFoHg+/5ICdpm13UTho7Q9/0WnsfwiL/ouHwHrJgQR8WEwVG+oXpMPaDAkdzvd7AsC8qyhCiKJjiRnCKwbRsMw9hcQ5zv9maSBeu6hjRNYRgGFuKaCNwjkjzPoSiK1d1gDDecQobOBwswzabD/D3Np7AHOIrvNpHmPI+Kc2RZBm3bcp8wuwSIot7QQ0PznoR6wYSK0Xb/AGVLcWwc7Ng3AAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+      </div>
+        <input type="hidden" name="action" value="Login">
+        <input type="submit" value="Login">
+    </form>
+    <a href="./?action=register">Don't have a login? Register here.</a>
+    </section>
+    </main>
+
+
+</body></html>
