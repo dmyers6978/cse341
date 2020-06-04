@@ -9,9 +9,9 @@
 </head>
 <body>
     <main>
+    <p>Thank you for your interest. Just so you know, no payment information is ever requested or saved on this site. All personal info such as your name, phone number and email are saved in a secure database. Your password is encrypted with the latest security algorithm and is not known to anyone but yourself.</p>
     <section>
       <?php if(isset($_SESSION['message'])){echo $_SESSION['message'];}?>
-      <p>Thank you for your interest. Just so you know, no payment information is ever requested or saved on this site. All personal info such as your name, phone number and email are saved in a secure database. Your password is encrypted with the latest security algorithm and is not known to anyone but yourself.</p>
         <form action="./" method="post">
         <div>
         <label for="fName">First Name: </label>
