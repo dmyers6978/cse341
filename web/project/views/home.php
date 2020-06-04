@@ -24,7 +24,7 @@
             <section id="second"><a href="./?action=contact"><p>Hit the trail too hard?</p><p>I have the tools and experience to get you back on the trail.</p></a></section>
             <section id="third"><a href="./?action=status"><p>Already dropped off your bike?</p><p>Go here to see the status of your bike.</p></a></section>
             <img src="" alt="status" id="fourth">
-            <img src="" alt="FB" id="fifth">
+            <img src=",/images/facebook.jpg" alt="FB" id="fifth">
             <section id="sixth"><a href="https://www.facebook.com/groups/606194506596284t"><p>Love Mountain biking?</p><p>So do I. Join my facebook group to find others as well.</p></a></section>
             <section id="seventh"><a href="./?action=about"><p>Still skeptical?</p><p>Click here to know more about my origins and backstory.</p></a></section>
             <img src="" alt="About" id="eighth">
