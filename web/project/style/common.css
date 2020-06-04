@@ -79,6 +79,10 @@ nav.show{
     background: rgb(0,0,0);
 }
 
+nav ul li.active, nav ul li:hover{
+     background-color: rgb(160,50,50);
+}
+
 @media only screen and (min-width: 800px) {
     .container{
         display: none;
