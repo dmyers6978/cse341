@@ -1,35 +1,58 @@
 <html><head>
   <meta charset="utf-8">
-  <title>[Name here] | Register</title>
+  <title>[Name here] | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="./style/common.css">
-  <link rel="stylesheet" type="text/css" href="./style/register.css">
+  <link rel="stylesheet" type="text/css" href="./style/contact.css">
 </head>
 <body>
+    <header>
+        <span>Welcome back Dustin | </span><a href="./?action=logout">Log Out</a>    </header>
+    <nav id="navBar" class="hide">
+        
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<ul id="topNav" class="hide">
+    <li><a href="./">Home</a></li>
+    <li><a href="./?action=contact">Contact Me</a></li>
+    <li><a href="./?action=status">Bike Status</a></li>
+    <li><a href="./?action=about">About Me</a></li>
+</ul>    </nav>
     <main>
+<section>
+      <h2>Services I provide</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Estimated Time (Minutes)</th>
+                <th>Estimated Cost*</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Brake Adjustment</td><td>30</td><td>$<label for="1">5.00</label>&nbsp;<input type="checkbox" id="1" onchange="addCost(this)"></td></tr><tr><td>Cable Repair</td><td>30</td><td>$<label for="4">5.00</label>&nbsp;<input type="checkbox" id="4" onchange="addCost(this)"></td></tr><tr><td>Cassette Replacement</td><td>30</td><td>$<label for="6">5.00</label>&nbsp;<input type="checkbox" id="6" onchange="addCost(this)"></td></tr><tr><td>Chain Replacement</td><td>30</td><td>$<label for="7">5.00</label>&nbsp;<input type="checkbox" id="7" onchange="addCost(this)"></td></tr><tr><td>Derailleur Adjustment</td><td>30</td><td>$<label for="2">5.00</label>&nbsp;<input type="checkbox" id="2" onchange="addCost(this)"></td></tr><tr><td>Tire/Inner Tube repair</td><td>30</td><td>$<label for="3">5.00</label>&nbsp;<input type="checkbox" id="3" onchange="addCost(this)"></td></tr><tr><td>Bearing Overhaul</td><td>60</td><td>$<label for="5">10.00</label>&nbsp;<input type="checkbox" id="5" onchange="addCost(this)"></td></tr>            <tr><td></td><td></td><td id="total"></td></tr>
+        </tbody>
+    </table>
+    <p>*Prices are estimates. Depending on situation or parts required, prices are subject to change.</p>
+</section>
+<div>
     <section>
-              <form action="./" method="post">
-        <div>
-        <label for="fName">First Name: </label>
-        <input type="text" name="fName" id="fName" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
-        </div><div>
-        <label for="lName">Last Name: </label>
-        <input type="text" name="lName" id="lName" required="">
-        </div><div>
-        <label for="phone">Phone Number: </label>
-        <input type="tel" name="phone" id="phone" required="">
-        </div><div>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email" required="">
-        </div><div>
-        <label for="password">Password: </label>
-        <input type="password" name="password" id="password" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
-        </div>
-        <input type="hidden" name="action" value="Register">
-        <input type="submit" value="Register">
-    </form>
-    </section>
+    <h1>Contact me for more info</h1>  
+    <p>1213 Center St. Rear</p>
+    <p>Evanston WY 82930</p>
+    <div>
+      <a href="tel:30077995311">Call Me</a>
+      <a href="./?action=email">Email Me</a>
+      </div>
+  </section>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.7147251305189!2d-110.97017917079515!3d41.268408006716584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE2JzA2LjMiTiAxMTDCsDU4JzEwLjciVw!5e0!3m2!1sen!2sus!4v1591239639417!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
     </main>
+    <script src="./scripts/cost.js"></script>
+    <script src="./scripts/navButton.js"></script>
 
 
 </body></html>

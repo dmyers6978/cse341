@@ -1,0 +1,64 @@
+section{
+    text-align: center;
+}
+
+iframe{
+    width: 300px;
+    height: 225px; 
+}
+
+table{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+table thead tr th, table tbody tr td{
+    text-align: center;
+    padding: 5px;
+}
+
+table thead tr{
+    background-color: rgb(160,50,50);
+}
+
+table tbody tr:nth-child(odd){
+    background-color: rgb(150,150,150);
+}
+
+input[type="checkbox"]:checked{
+    background-color: rgb(160,50,50);
+}
+
+main div{
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+}
+
+main div section div{
+    width: 175px;
+}
+
+main div section div a{
+    margin: 0 auto;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(160,50,50);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+main div section{
+    height: 225px;
+}
