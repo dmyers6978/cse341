@@ -5,6 +5,7 @@
   <title>[Name here] | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="./style/common.css">
+  <link rel="stylesheet" type="text/css" href="./style/contact.css">
 </head>
 <body>
     <header>
