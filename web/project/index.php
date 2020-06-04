@@ -102,7 +102,7 @@ switch($action){
         $_SESSION['loggedIn'] = TRUE;
         $_SESSION['userData'] = $exists;
         $_SESSION['message'] = "<p>Welcome back $exists[userfirstname].</p>";
-        if(isset($_SESSIO['location'])){
+        if(isset($_SESSION['location'])){
             $location = "location: $_SESSION[location]";
             header($location);
             exit;
