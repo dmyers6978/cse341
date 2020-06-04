@@ -27,7 +27,7 @@
             <img src="./images/facebook.jpg" alt="FB" id="fifth">
             <section id="sixth"><a href="https://www.facebook.com/groups/606194506596284t"><p>Love Mountain biking?</p><p>So do I. Join my facebook group to find others as well.</p></a></section>
             <section id="seventh"><a href="./?action=about"><p>Still skeptical?</p><p>Click here to know more about my origins and backstory.</p></a></section>
-            <img src="" alt="About" id="eighth">
+            <img src="./images/about.JPG" alt="About" id="eighth">
     </div>
     </main>
     <script src="./scripts/navButton.js"></script>
