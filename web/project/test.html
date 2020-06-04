@@ -1,58 +1,31 @@
 <html><head>
-  <meta charset="utf-8">
-  <title>[Name here] | Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="./style/common.css">
-  <link rel="stylesheet" type="text/css" href="./style/contact.css">
-</head>
-<body>
-    <header>
-        <span>Welcome back Dustin | </span><a href="./?action=logout">Log Out</a>    </header>
-    <nav id="navBar" class="hide">
-        
-<div class="container" onclick="myFunction(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
-<ul id="topNav" class="hide">
-    <li><a href="./">Home</a></li>
-    <li><a href="./?action=contact">Contact Me</a></li>
-    <li><a href="./?action=status">Bike Status</a></li>
-    <li><a href="./?action=about">About Me</a></li>
-</ul>    </nav>
-    <main>
-<section>
-      <h2>Services I provide</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Service</th>
-                <th>Estimated Time (Minutes)</th>
-                <th>Estimated Cost*</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Brake Adjustment</td><td>30</td><td>$<label for="1">5.00</label>&nbsp;<input type="checkbox" id="1" onchange="addCost(this)"></td></tr><tr><td>Cable Repair</td><td>30</td><td>$<label for="4">5.00</label>&nbsp;<input type="checkbox" id="4" onchange="addCost(this)"></td></tr><tr><td>Cassette Replacement</td><td>30</td><td>$<label for="6">5.00</label>&nbsp;<input type="checkbox" id="6" onchange="addCost(this)"></td></tr><tr><td>Chain Replacement</td><td>30</td><td>$<label for="7">5.00</label>&nbsp;<input type="checkbox" id="7" onchange="addCost(this)"></td></tr><tr><td>Derailleur Adjustment</td><td>30</td><td>$<label for="2">5.00</label>&nbsp;<input type="checkbox" id="2" onchange="addCost(this)"></td></tr><tr><td>Tire/Inner Tube repair</td><td>30</td><td>$<label for="3">5.00</label>&nbsp;<input type="checkbox" id="3" onchange="addCost(this)"></td></tr><tr><td>Bearing Overhaul</td><td>60</td><td>$<label for="5">10.00</label>&nbsp;<input type="checkbox" id="5" onchange="addCost(this)"></td></tr>            <tr><td></td><td></td><td id="total"></td></tr>
-        </tbody>
-    </table>
-    <p>*Prices are estimates. Depending on situation or parts required, prices are subject to change.</p>
-</section>
-<div>
-    <section>
-    <h1>Contact me for more info</h1>  
-    <p>1213 Center St. Rear</p>
-    <p>Evanston WY 82930</p>
-    <div>
-      <a href="tel:30077995311">Call Me</a>
-      <a href="./?action=email">Email Me</a>
-      </div>
-  </section>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.7147251305189!2d-110.97017917079515!3d41.268408006716584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE2JzA2LjMiTiAxMTDCsDU4JzEwLjciVw!5e0!3m2!1sen!2sus!4v1591239639417!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-</div>
-    </main>
-    <script src="./scripts/cost.js"></script>
-    <script src="./scripts/navButton.js"></script>
-
-
-</body></html>
+    <meta charset="utf-8">
+    <title>[Name here] | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./style/common.css">
+      <link rel="stylesheet" type="text/css" href="./style/jobs.css">
+  </head>
+  <body>
+      <header>
+          <span>Welcome back Dustin | </span><a href="./?action=logout">Log Out</a>    </header>
+      <nav id="navBar" class="hide">
+          
+  <div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <ul id="topNav" class="hide">
+      <li><a href="./">Home</a></li>
+      <li><a href="./?action=contact">Contact Me</a></li>
+      <li class="active"><a href="./?action=status">Bike Status</a></li>
+      <li><a href="./?action=about">About Me</a></li>
+  </ul>    </nav>
+      <main>
+          <p>Welcome back Dustin.</p>        <table><thead><tr><th>Customer</th><th>Description</th><th>status</th><th>Dropped Off</th></tr></thead><tbody><tr><td>Dustin Myers</td><td></td><td>Pending Pickup<form method="post" action="./"><select name="statusId"><option value="0">Select an option</option><option value="1">Pending Pickup</option><option value="2">Complete</option><option value="3">Being Worked On</option><option value="4">Waiting For Parts</option><option value="5">Waiting In Line</option><option value="6">Picked up</option></select><input type="hidden" name="action" value="editStatus"><input type="hidden" name="jobId" value="12"><input type="submit" value="Change Status"></form></td><td>05-31-2020 02:02:34</td></tr><tr><td>Test User</td><td>Red bike</td><td>Waiting In Line<form method="post" action="./"><select name="statusId"><option value="0">Select an option</option><option value="1">Pending Pickup</option><option value="2">Complete</option><option value="3">Being Worked On</option><option value="4">Waiting For Parts</option><option value="5">Waiting In Line</option><option value="6">Picked up</option></select><input type="hidden" name="action" value="editStatus"><input type="hidden" name="jobId" value="11"><input type="submit" value="Change Status"></form></td><td>05-31-2020 02:02:34</td></tr><tr><td>Test User</td><td>Blue Bike</td><td>Waiting In Line<form method="post" action="./"><select name="statusId"><option value="0">Select an option</option><option value="1">Pending Pickup</option><option value="2">Complete</option><option value="3">Being Worked On</option><option value="4">Waiting For Parts</option><option value="5">Waiting In Line</option><option value="6">Picked up</option></select><input type="hidden" name="action" value="editStatus"><input type="hidden" name="jobId" value="14"><input type="submit" value="Change Status"></form></td><td>05-31-2020 02:10:54</td></tr></tbody></table><form method="post" action="./">
+              <div><label for="jobTitle">Description: </label><input type="text" name="jobTitle" id="jobTitle"></div>
+              <div><label for="userid">Select a user: </label><select id="userid" name="userid"><option value="0">Select a user</option><option value="1">Dustin Myers</option><option value="2">Test User</option></select></div><label for="serviceId">Select services: </label><div><span>Brake Adjustment </span><input type="checkbox" name="services[]" value="1"></div><div><span>Cable Repair </span><input type="checkbox" name="services[]" value="4"></div><div><span>Cassette Replacement </span><input type="checkbox" name="services[]" value="6"></div><div><span>Chain Replacement </span><input type="checkbox" name="services[]" value="7"></div><div><span>Derailleur Adjustment </span><input type="checkbox" name="services[]" value="2"></div><div><span>Tire/Inner Tube repair </span><input type="checkbox" name="services[]" value="3"></div><div><span>Bearing Overhaul </span><input type="checkbox" name="services[]" value="5"></div><input type="hidden" name="action" value="addJob"><input type="submit" value="Add Job"></form>    </main>
+      <script src="./scripts/navButton.js"></script>
+  
+  
+  </body></html>
