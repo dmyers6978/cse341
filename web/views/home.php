@@ -8,7 +8,7 @@
 </head>
 <body>
     <header><?php include './common/header.php';?></header>
-    <nav><?php include'./common/nav.php';?></nav>
+    <nav><?php include './common/nav.php';?></nav>
     <main>
     <p>My name is Dustin Myers. I am from Evanston Wyoming. I have a wife and one daughter and another on the way very soon.</p>
     <div><img src="images/family.jpg"><img src="images/bike.JPG"></div>
