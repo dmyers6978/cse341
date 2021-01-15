@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-    <header><?php include '/common/header.php';?></header>
-    <nav><?php include '/common/nav.php';?></nav>
+    <header><?php include './common/header.php';?></header>
+    <nav><?php include './common/nav.php';?></nav>
     <main>
         <h1>Assignments</h1>
         <ul>
