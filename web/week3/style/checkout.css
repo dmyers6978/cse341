@@ -1,0 +1,45 @@
+form{
+    margin: 0 auto;
+    text-align: center;
+}
+
+form label{
+    width: 150px;
+    text-align: right;
+}
+
+form input:not(:last-of-type), form select{
+    width: 250px;
+    text-align: left;
+}
+
+main h1{
+    margin: 10px auto;
+    text-align: center;
+}
+
+form{
+    width: 450px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+form input:last-of-type{
+    width: 150px;
+    height: 35px;
+    background-color: gray;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    color: white;
+}
+
+form input:last-of-type:hover{
+    color: black;
+    background-color: white;
+}
+
+main p{
+    text-align: center;
+    margin: 0 auto;
+}

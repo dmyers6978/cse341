@@ -1,0 +1,184 @@
+html, body{
+  height: 100%;
+}
+
+header, body{
+  background-color: green;
+}
+
+.icon-cart {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    clear: left;
+    float: left
+  }
+  
+  .icon-cart .cart-line-1 {
+    width: 15%;
+    height: 7%;
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg); 
+    background-color: white;
+    border-bottom-left-radius: 35%;
+  }
+  
+  .icon-cart .cart-line-2 {
+    width: 35%;
+    height: 7%;
+    position: absolute;
+    left: 6%;
+    top: 40%;
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    transform: rotate(80deg); 
+    background-color: white;
+  }
+  
+  .icon-cart .cart-line-2:before {
+    content: "";
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    left: 45%;
+    top: -280%;
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    transform: rotate(-80deg); 
+    background-color: inherit;
+  }
+  
+  .icon-cart .cart-line-2:after {
+    content: "";
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    left: 59%;
+    top: -670%;
+    background-color: inherit;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: rotate(40deg); 
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 25%;
+  }
+  
+  .icon-cart .cart-line-3 {
+    width: 30%;
+    height: 7%;
+    position: absolute;
+    left: 33%;
+    top: 45%;
+    background-color: white;
+  }
+  
+  .icon-cart .cart-line-3:after {
+    content: "";
+    width: 124%;
+    height: 100%;
+    position: absolute;
+    top: -150%;
+    left: -5%;
+    background-color: inherit;
+  }
+  
+  .icon-cart .cart-wheel {
+    width: 12%;
+    height: 12%;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    left: 28%;
+    bottom: 20%;
+  }
+  
+  .icon-cart .cart-wheel:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 100%;
+    position: absolute;
+    left: 200%;
+    bottom: 0;
+  }
+
+  .items{
+      position: relative;
+      bottom: -4px;
+      text-align: center;
+      margin: 0 auto;
+  }
+
+  header{
+      width: 100%;
+      margin: 0 auto; 
+      height: 50px;
+      display: flex;
+      flex-direction: row-reverse;
+  }
+
+  header a{
+    margin-right: 10%;
+    text-decoration: none;
+    color: white;
+  }
+
+  header a:hover{
+    color: white;
+  }
+
+  nav{
+    width: 100%;
+  }
+
+  nav ul{
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav ul li{
+    width: 150px;
+    height: 35px;
+    background-color: gray;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 35px;
+    list-style-type: none;
+  }
+
+  nav ul li a, nav ul li a:hover{
+    text-decoration: none;
+    color: white;
+  }
+
+  main{
+    background-color: tan;
+    height: 100%;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 10px;
+    width: 80%;
+  }
+
+  nav ul li:hover{
+    background-color: white;
+  }
+
+  nav ul li:hover a{
+    color: black;
+  }
