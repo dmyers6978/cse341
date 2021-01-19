@@ -12,6 +12,7 @@
     <main>
         <h1>Assignments</h1>
         <ul>
+        <li><a href="./week3/">Week 3 - Shopping cart</a></li>
         </ul>
     </main>
 </body>
