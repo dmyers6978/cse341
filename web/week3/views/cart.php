@@ -10,8 +10,8 @@
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/header.php';?>
-<?php include $_SERVER['DOCUMENT_ROOT'].'/cs313/week3/common/nav.php';?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/week3/common/header.php';?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/week3/common/nav.php';?>
     <main>
         <?php if(empty($_SESSION['cart'])){
             echo "<p>You have nothing in your cart yet. Click <a href='./'>here</a> to continue shopping.</p>";
