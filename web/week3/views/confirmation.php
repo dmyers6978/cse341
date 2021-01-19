@@ -10,8 +10,8 @@
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'].'/week3/common/header.php';?>
-<?php include $_SERVER['DOCUMENT_ROOT'].'/week3/common/nav.php';?>
+<?php include './common/header.php';?>
+<?php include './common/nav.php';?>
     <main>
         <h1>Thank you for shopping with us!</h1>
         <p><?php echo count($_SESSION['cart']);?> items will be shipped to </p>
