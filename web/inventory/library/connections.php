@@ -22,3 +22,5 @@ catch (PDOException $ex)
   die();
 }
 }
+
+dbConnect();
