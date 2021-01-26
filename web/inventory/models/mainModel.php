@@ -1,2 +1,2 @@
 <?php
-require_once '../library/connections.php';
+require_once '/inventory/library/connections.php';
