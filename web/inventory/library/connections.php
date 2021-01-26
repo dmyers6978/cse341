@@ -13,7 +13,7 @@ try
         ltrim($db["path"], "/")
     ));
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected.";
+//   echo "Connected.";
 return $db;
 }
 catch (PDOException $ex)
