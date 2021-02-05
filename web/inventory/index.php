@@ -14,7 +14,7 @@ switch($action){
     break;
 
     case 'editInv':
-        $invId = filter_input(INPUT_POST, 'invId', FILTER_VALIDATE_INT);
+        $invId = filter_input(INPUT_POST, 'itemId', FILTER_VALIDATE_INT);
         $quantity = filter_input(INPUT_POST, 'quantity', FILTER_VALIDATE_INT);
         $actionRadio = filter_input(INPUT_POST, 'actionRadio', FILTER_SANITIZE_STRING);
         var_dump($invId, $quantity, $actionRadio);
