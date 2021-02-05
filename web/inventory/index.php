@@ -9,7 +9,7 @@ if(!$action){
 switch($action){
     case 'invManager':
         $select = buildItemSelect();
-        include './viewx/invManager.php';
+        include './view/invManager.php';
         exit;
     break;
 
