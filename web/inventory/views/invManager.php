@@ -14,7 +14,10 @@
     <br><form method='post' action='./'>
     <label for='itemId'>Select an item: <?php if(isset($select)){ echo $select;}?></label>
     <br><br>
+    <label for='quantity'>Quantity: <input type='number' name='quantity' id='quantity'></label>
+    <br><br>
     <label for='actionRadio'>Add <input type='radio' name='actionRadio' value='add'>Remove <input type='radio' name='actionRadio' value='remove'></label>
+    <br><br>
     <input type='hidden' name='action' value='editInv'>
     <input type='submit' value='Go'>
     </form>
