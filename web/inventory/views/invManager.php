@@ -15,8 +15,8 @@
     <label for='itemId'>Select an item: <?php if(isset($select)){ echo $select;}?></label>
     <br><br>
     <label for='actionRadio'>Add <input type='radio' name='actionRadio' value='add'>Remove <input type='radio' name='actionRadio' value='remove'></label>
-    <input type='hidden' name='action' value='addInv'>
-    <input type='submit' value='go'>
+    <input type='hidden' name='action' value='editInv'>
+    <input type='submit' value='Go'>
     </form>
     </main>
 </body>
