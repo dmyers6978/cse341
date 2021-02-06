@@ -75,6 +75,7 @@ function deleteItem($itemId){
     $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
     $stmt->execute();
     $sql = 'DELETE FROM items WHERE itemid = :itemId;';
+    $stmt = $db->prepare($sql);
     $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
