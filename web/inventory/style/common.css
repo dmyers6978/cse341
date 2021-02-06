@@ -101,6 +101,7 @@ form #invMan{
 table{
     width: 80%;
     border-collapse: collapse;
+    margin: 15px, auto;
 }
 
 thead tr{
@@ -109,6 +110,10 @@ thead tr{
 
 td{
     text-align: center;
+}
+
+td #form{
+    display: inline-flex;
 }
 
 tbody tr:nth-of-type(even){
