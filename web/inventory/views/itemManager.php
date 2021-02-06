@@ -11,6 +11,7 @@
     <nav><?php include './common/nav.php';?></nav>
     <main>
     <?php if(isset($_SESSION['message'])){ echo $_SESSION['message'];}?>
+    <br><br><h2>Add an item</h2>
     <br><form method='post' action='./'>
     <label for='itemName'>Item Name: <input type='text' name='itemName' id='itemName'></label>
     <br><br>
