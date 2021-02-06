@@ -16,4 +16,5 @@ function buildInvTable(){
         $table .= "<tr><td>$item[itemname]</td><td>$item[quantity]</td></tr>";
     }
     $table .= "</tbody></table>";
+    return $table;
 }
