@@ -42,10 +42,24 @@ switch($action){
         exit;
     break;
 
-    case 'itemManager';
+    case 'itemManager':
         $table = buildItemTable();
         include './views/itemManager.php';
         exit;
+    break;
+
+    case 'deleteItem':
+        $itemId = filter_input(INPUT_GET, 'itemId', FILTER_VALIDATE_INT);
+        $success = deleteItem($itemId);
+        if($success){
+            $_SESSION['message'] = "<p>Item deleted successfully.</p>";
+            header('location: ./?action=itemManager');
+            exit;
+        } else{
+            $_SESSION['message'] = "<p>Something went wrong. Please try again later.</p>";
+            header('location: ./?action=itemManager');
+            exit;
+        }
     break;
 
     default:

@@ -67,3 +67,15 @@ function getInv(){
     $stmt->closeCursor();
     return $result;
 }
+
+function deleteItem($itemId){
+    $db = dbConnect();
+    $sql = 'DELETE FROM inventory WHERE itemid = :itemId;
+    DELETE FROM items WHERE itemid = :itemId;';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}

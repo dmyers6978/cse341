@@ -117,18 +117,6 @@ td#form{
     display: inline-flex;
 }
 
-td#form{
-    display: inline-flex;
-}
-
-td#form:first-child{
-    margin-left: auto;    
-}
-
-td#form:last-child{
-    margin-right: auto;    
-}
-
 tbody tr:nth-of-type(even){
     background-color: rgba(214, 44, 1,.2);
 }
