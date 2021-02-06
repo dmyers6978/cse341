@@ -11,8 +11,6 @@ function buildItemSelect(){
 
 function buildInvTable(){
     $inventory = getInv();
-    var_dump($inventory);
-    exit;
     $table = "<table><thead><tr><th>Item</th><th>Quantity</th></tr></thead><tbody>";
     foreach($inventory as $item){
         $table .= "<tr><td>$item[itemname]</td><td>$item[quantity]</td></tr>";
