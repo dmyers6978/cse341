@@ -87,3 +87,12 @@ li a{
     text-decoration: none;
     color: white;
 }
+
+form{
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type=radio]{
+    margin: 0 10px;
+}
