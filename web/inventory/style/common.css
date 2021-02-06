@@ -121,11 +121,11 @@ td#form{
     display: inline-flex;
 }
 
-td#form:nth-child(1){
+td#form:first-child{
     margin-left: auto;    
 }
 
-td#form:nth-last-child(){
+td#form:last-child{
     margin-right: auto;    
 }
 
