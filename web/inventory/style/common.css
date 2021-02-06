@@ -92,6 +92,8 @@ input[type=submit]{
 form{
     background-color: rgb(163, 163, 163);
     padding: 20px;
+    width: 300px;
     border: 3px solid black;
     border-radius: 10px;
+    color: black;
 }
