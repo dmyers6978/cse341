@@ -18,3 +18,13 @@ function buildInvTable(){
     $table .= "</tbody></table>";
     return $table;
 }
+
+function buildItemTable(){
+    $items = getItems();
+    $table = "<table><thead><tr><th>Name</th><th>Action</th></tr></thead><tbody>";
+    foreach($items as $item){
+        $table .= "<tr><td>$item[itemname]</td><td><form method='get' action='./'><input type='hidden' name='itemId' value='$item[itemid]'><input type='hidden' name='action' value='editItem'><input type='submit' value='🛠️'></form>&nbsp;&nbsp;|&nbsp;&nbsp;<form method='get' action='./'><input type='hidden' name='itemId' value='$item[itemid]'><input type='hidden' name='action' value='deleteItem'><input type='submit' value='❌'></form></td></tr>";
+    }
+    $table .= "</tbody></table>";
+    return $table;
+}

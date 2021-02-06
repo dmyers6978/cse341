@@ -42,6 +42,12 @@ switch($action){
         exit;
     break;
 
+    case 'itemManager';
+        $table = buildItemTable();
+        include './views/itemManager.php';
+        exit;
+    break;
+
     default:
     include './views/home.php';
     exit;
