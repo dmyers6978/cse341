@@ -81,3 +81,14 @@ function deleteItem($itemId){
     $stmt->closeCursor();
     return $rowsChanged;
 }
+
+function addItem($itemName){
+    $db = dbConnect();
+    $sql = 'INSERT INTO items (itemname) VALUES (:itemName)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':itemName', $itemName, PDO::PARAM_STR);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}

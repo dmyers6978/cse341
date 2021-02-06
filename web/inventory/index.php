@@ -62,6 +62,20 @@ switch($action){
         }
     break;
 
+    case 'addItem':
+        $itemName = filter_input(INPUT_POST, 'itemName', FILTER_SANITIZE_STRING);
+        $success = addItem($itemName);
+        if($success){
+            $_SESSION['message'] = "<p>$itemName added successfully.</p>";
+            header('location: ./?action=itemManager');
+            exit;
+        } else{
+            $_SESSION['message'] = "<p>Something went wrong. Please try again later.</p>";
+            header('location: ./?action=itemManager');
+            exit;
+        }
+    break;
+
     default:
     include './views/home.php';
     exit;
