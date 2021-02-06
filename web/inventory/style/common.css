@@ -89,7 +89,7 @@ input[type=submit]{
     border: none;
 }
 
-form{
+form #invMan{
     background-color: rgb(163, 163, 163);
     padding: 20px;
     width: 300px;

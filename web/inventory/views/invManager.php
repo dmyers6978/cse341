@@ -11,7 +11,7 @@
     <nav><?php include './common/nav.php';?></nav>
     <main>
     <?php if(isset($_SESSION['message'])){ echo $_SESSION['message'];}?>
-    <br><form method='post' action='./'>
+    <br><form id='invMan' method='post' action='./'>
     <label for='itemId'>Select an item: <?php if(isset($select)){ echo $select;}?></label>
     <br><br>
     <label for='quantity'>Quantity: <input type='number' name='quantity' id='quantity'></label>
