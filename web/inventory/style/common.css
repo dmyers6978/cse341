@@ -21,18 +21,6 @@ p{
     max-width: 50%;
 }
 
-p:nth-of-type(odd){
-    margin-left: 0;
-    margin-right: 50%;
-    box-shadow: rgb(20,20,20) 5px 5px 4px;
-}
-
-p:nth-of-type(even){
-    margin-right: 0;
-    margin-left: 50%;
-    box-shadow: rgb(20,20,20) -5px 5px 4px;
-}
-
 div{
     display: flex;
     justify-content: space-between;
