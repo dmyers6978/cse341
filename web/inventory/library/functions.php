@@ -12,7 +12,7 @@ function buildItemSelect(){
 function buildInvTable(){
     $inventory = getInv();
     if($inventory){
-    $table = "<table><thead><tr><th>Item</th><th>Quantity</th></tr></thead><tbody>";
+    $table = "<abel for='itemSearch'>🔍<input type='text' id='itemSearch' onkeyup='filterItems()'></abel><table><thead><tr><th>Item</th><th>Quantity</th></tr></thead><tbody>";
     foreach($inventory as $item){
         $table .= "<tr><td>$item[itemname]</td><td>$item[quantity]</td></tr>";
     }
