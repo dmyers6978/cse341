@@ -18,6 +18,7 @@
     <input type='hidden' name='action' value='addItem'>
     <input type='submit' value='Go'>
     </form>
+    <br><br>
     <?php if(isset($table)){
         echo $table;
     }?>
