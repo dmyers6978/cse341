@@ -17,8 +17,20 @@ switch($action){
         $invId = filter_input(INPUT_POST, 'itemId', FILTER_VALIDATE_INT);
         $quantity = filter_input(INPUT_POST, 'quantity', FILTER_VALIDATE_INT);
         $actionRadio = filter_input(INPUT_POST, 'actionRadio', FILTER_SANITIZE_STRING);
-        var_dump($invId, $quantity, $actionRadio);
-        exit;
+        $exists = getInv($invId);
+        if($exists){
+        if($actionRadio == 'add'){
+            $success = addInv($invId, $quantity);
+        } else{
+            $success = removeInv($invId, $quantity);
+        }
+        } else{
+            $success = insertInv($invId, $quantity);
+        }
+        if($success){
+            $_SESSION['message'] = "<p>Item updated successfully.</p>";
+            header('location: ./?action=invManager');
+        }
     break;
 
     default:
