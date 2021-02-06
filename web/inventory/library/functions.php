@@ -8,3 +8,12 @@ function buildItemSelect(){
     $select .= "</select>";
     return $select;
 }
+
+function buildInvTable(){
+    $inventory = getInv();
+    $table = "<table><thead><tr><th>Item</th><th>Quantity</th></tr></thead><tbody>";
+    foreach($inventory as $item){
+        $table .= "<tr><td>$item[itemname]</td><td>$item[quantity]</td></tr>";
+    }
+    $table .= "</tbody></table>";
+}

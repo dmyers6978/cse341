@@ -20,7 +20,7 @@ switch($action){
         $invId = filter_input(INPUT_POST, 'itemId', FILTER_VALIDATE_INT);
         $quantity = filter_input(INPUT_POST, 'quantity', FILTER_VALIDATE_INT);
         $actionRadio = filter_input(INPUT_POST, 'actionRadio', FILTER_SANITIZE_STRING);
-        $exists = getInv($invId);
+        $exists = getInvById($invId);
         if($exists){
         if($actionRadio == 'add'){
             $success = addInv($invId, $quantity);
@@ -34,6 +34,12 @@ switch($action){
             $_SESSION['message'] = "<p>Item updated successfully.</p>";
             header('location: ./?action=invManager');
         }
+    break;
+
+    case 'viewInv':
+        $table = buildInvTable();
+        include './views/viewInv.php';
+        exit;
     break;
 
     default:

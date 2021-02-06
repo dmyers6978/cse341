@@ -35,7 +35,7 @@ function addInv($invId, $quantity){
     return $rowsChanged;
 }
 
-function getInv($invId){
+function getInvById($invId){
     $db = dbConnect();
     $sql = 'SELECT * FROM items JOIN inventory USING(itemId) WHERE invid = :invId';
     $stmt = $db->prepare($sql);
@@ -56,4 +56,14 @@ function removeInv($invId, $quantity){
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();
     return $rowsChanged;
+}
+
+function getInv(){
+    $db = dbConnect();
+    $sql = 'SELECT * FROM items JOIN inventory USING(itemId) ORDER BY itemname';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $result;
 }
