@@ -112,7 +112,7 @@ td{
     text-align: center;
 }
 
-td #form{
+td#form{
     display: inline-flex;
 }
 
