@@ -11,7 +11,8 @@
     <nav><?php include './common/nav.php';?></nav>
     <main>
     <?php if(isset($_SESSION['message'])){ echo $_SESSION['message'];}?>
-    <br><form id='invMan' method='post' action='./'>
+    <br>
+    <fieldset><legend>Edit inventory</legend><form id='invMan' method='post' action='./'>
     <label for='itemId'>Select an item: <?php if(isset($select)){ echo $select;}?></label>
     <br><br>
     <label for='quantity'>Quantity: <input type='number' name='quantity' id='quantity'></label>
@@ -21,6 +22,7 @@
     <input type='hidden' name='action' value='editInv'>
     <input type='submit' value='Go'>
     </form>
+    </fieldset>
     </main>
 </body>
 </html>
