@@ -11,11 +11,11 @@ function getItems(){
     return $result;
 }
 
-function insertInv($invId, $quantity){
+function insertInv($itemId, $quantity){
     $db = dbConnect();
-    $sql = 'INSERT INTO inventory (invid, quantity) VALUES (:invId, :quantity);';
+    $sql = 'INSERT INTO inventory (itemId, quantity) VALUES (:itemId, :quantity);';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
+    $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
     $stmt->bindValue(':quantity', $quantity, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
