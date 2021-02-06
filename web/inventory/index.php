@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION)){
+    session_start();
+}
 require_once './models/mainModel.php';
 require_once './library/functions.php';
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
