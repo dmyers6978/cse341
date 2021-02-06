@@ -14,5 +14,5 @@
     if(isset($table)){ echo $table;}?>
     </main>
 </body>
-<script src='./sctipts/filterItems.js'></script>
+<script src='./scripts/filterItems.js'></script>
 </html>
