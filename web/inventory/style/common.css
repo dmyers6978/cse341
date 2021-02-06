@@ -97,3 +97,23 @@ form{
     border-radius: 10px;
     color: black;
 }
+
+table{
+    width: 80%;
+}
+
+thead tr{
+    background-color: rgb(255,50,0);
+}
+
+td{
+    text-align: center;
+}
+
+tr:nth-of-type(even){
+    background-color: rgba(255,50,0,.5);
+}
+
+tr:nth-of-type(odd){
+    background-color: rgba(163, 163, 163, .5);
+}
