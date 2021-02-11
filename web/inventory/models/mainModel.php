@@ -3,7 +3,7 @@ require_once '/app/web/inventory/library/connections.php';
 
 function getItems(){
     $db = dbConnect();
-    $sql = 'SELECT itemid, itemname, COALESCE(quantity, 0) AS quantity FROM items LEFT JOIN inventory USING(itemId)';
+    $sql = 'SELECT itemid, itemname, COALESCE(quantity, 0) AS quantity FROM items LEFT JOIN inventory USING(itemid) ORDER BY itemname ASC';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
