@@ -35,6 +35,9 @@ switch($action){
         if($success){
             $_SESSION['message'] = "<p>Item updated successfully.</p>";
             header('location: ./?action=invManager');
+        } else{
+            $_SESSION['message'] = "<p>Something went wrong. Try again later.</p>";
+            header('location: ./?action=invManager');
         }
     break;
 
