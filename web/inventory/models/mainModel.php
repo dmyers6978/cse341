@@ -93,3 +93,15 @@ function addItem($itemName){
     $stmt->closeCursor();
     return $rowsChanged;
 }
+
+function logAction($itemId, $quantity){
+    $db = dbConnect();
+    $sql = 'INSERT INTO log (itemId, quantity) VALUES (:itemId, :quantity)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
+    $stmt->bindValue(':quantity', $quantity, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}

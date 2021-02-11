@@ -24,8 +24,10 @@ switch($action){
         if($exists){
         if($actionRadio == 'add'){
             $success = addInv($invId, $quantity);
+            logAction($exists['itemId'], $quantity);
         } else{
             $success = removeInv($invId, $quantity);
+            logAction($exists['itemId'], ($quantity*-1));
         }
         } else{
             $success = insertInv($invId, $quantity);
