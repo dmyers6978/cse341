@@ -35,9 +35,9 @@ function addInv($itemid, $quantity){
     return $rowsChanged;
 }
 
-function getInvById($itemid){
+function getInvByItemId($itemid){
     $db = dbConnect();
-    $sql = 'SELECT *, COALESCE(quantity, 0) AS quantity FROM items LEFT JOIN inventory USING(itemid) WHERE itemid = :itemid';
+    $sql = 'SELECT * FROM inventory WHERE itemid = :itemid';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':itemid', $itemid, PDO::PARAM_INT);
     $stmt->execute();

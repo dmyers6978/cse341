@@ -20,7 +20,7 @@ switch($action){
         $itemId = filter_input(INPUT_POST, 'itemId', FILTER_VALIDATE_INT);
         $quantity = filter_input(INPUT_POST, 'quantity', FILTER_VALIDATE_INT);
         $actionRadio = filter_input(INPUT_POST, 'actionRadio', FILTER_SANITIZE_STRING);
-        $exists = getInvById($itemId);
+        $exists = getInvByItemId($itemId);
         if($exists){
         if($actionRadio == 'add'){
             $success = addInv($itemId, $quantity);
