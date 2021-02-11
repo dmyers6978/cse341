@@ -108,7 +108,7 @@ function logAction($itemId, $quantity){
 
 function getLogs(){
     $db = dbConnect();
-    $sql = "SELECT *, TO_DATE(dateTime, 'DD-MM-YYYY HH:MI:SS AM') AS dateTime FROM items LEFT JOIN inventory USING(itemId) ORDER BY itemname";
+    $sql = "SELECT *, TO_DATE(datetime, 'DD-MM-YYYY HH:MI:SS AM') AS dateTime FROM log JOIN items USING(itemId) ORDER BY datetime DESC";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
