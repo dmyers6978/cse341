@@ -35,11 +35,11 @@ function addInv($itemid, $quantity){
     return $rowsChanged;
 }
 
-function getInvById($invId){
+function getInvById($itemid){
     $db = dbConnect();
-    $sql = 'SELECT *, COALESCE(quantity, 0) AS quantity FROM items LEFT JOIN inventory USING(itemid) WHERE invid = :invId';
+    $sql = 'SELECT *, COALESCE(quantity, 0) AS quantity FROM items LEFT JOIN inventory USING(itemid) WHERE itemid = :itemid';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
+    $stmt->bindValue(':itemid', $itemid, PDO::PARAM_INT);
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
