@@ -105,3 +105,13 @@ function logAction($itemId, $quantity){
     $stmt->closeCursor();
     return $rowsChanged;
 }
+
+function getLogs(){
+    $db = dbConnect();
+    $sql = "SELECT *, TO_DATE(dateTime, 'DD-MM-YYYY HH:MI:SS AM') AS dateTime FROM items LEFT JOIN inventory USING(itemId) ORDER BY itemname";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $result;
+}

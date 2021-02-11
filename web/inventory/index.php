@@ -78,6 +78,12 @@ switch($action){
         }
     break;
 
+    case 'viewLog':
+        $table = buildLogTable();
+        include './views/viewLog.php';
+        exit;
+    break;
+
     default:
     include './views/home.php';
     exit;
