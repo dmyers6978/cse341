@@ -17,20 +17,20 @@ switch($action){
     break;
 
     case 'editInv':
-        $invId = filter_input(INPUT_POST, 'itemId', FILTER_VALIDATE_INT);
+        $itemId = filter_input(INPUT_POST, 'itemId', FILTER_VALIDATE_INT);
         $quantity = filter_input(INPUT_POST, 'quantity', FILTER_VALIDATE_INT);
         $actionRadio = filter_input(INPUT_POST, 'actionRadio', FILTER_SANITIZE_STRING);
-        $exists = getInvById($invId);
+        $exists = getInvById($itemId);
         if($exists){
         if($actionRadio == 'add'){
-            $success = addInv($invId, $quantity);
-            logAction($exists['itemid'], $quantity);
+            $success = addInv($itemId, $quantity);
+            logAction($itemId, $quantity);
         } else{
-            $success = removeInv($invId, $quantity);
-            logAction($exists['itemid'], ($quantity*-1));
+            $success = removeInv($itemId, $quantity);
+            logAction($itemId, ($quantity*-1));
         }
         } else{
-            $success = insertInv($invId, $quantity);
+            $success = insertInv($itemId, $quantity);
         }
         if($success){
             $_SESSION['message'] = "<p>Item updated successfully.</p>";

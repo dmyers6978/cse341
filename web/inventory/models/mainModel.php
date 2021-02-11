@@ -23,11 +23,11 @@ function insertInv($itemId, $quantity){
     return $rowsChanged;
 }
 
-function addInv($invId, $quantity){
+function addInv($itemid, $quantity){
     $db = dbConnect();
-    $sql = 'UPDATE inventory SET quantity = (quantity + :quantity) WHERE invid = :invId;';
+    $sql = 'UPDATE inventory SET quantity = (quantity + :quantity) WHERE itemid = :itemid;';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
+    $stmt->bindValue(':itemid', $itemid, PDO::PARAM_INT);
     $stmt->bindValue(':quantity', $quantity, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
@@ -46,11 +46,11 @@ function getInvById($invId){
     return $result;
 }
 
-function removeInv($invId, $quantity){
+function removeInv($itemid, $quantity){
     $db = dbConnect();
-    $sql = 'UPDATE inventory SET quantity = (quantity - :quantity) WHERE itemid = :invId;';
+    $sql = 'UPDATE inventory SET quantity = (quantity - :quantity) WHERE itemid = :invIitemidd;';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
+    $stmt->bindValue(':itemid', $itemid, PDO::PARAM_INT);
     $stmt->bindValue(':quantity', $quantity, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
