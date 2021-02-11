@@ -43,7 +43,7 @@ function buildLogTable(){
     $logs = getLogs();
     $table = "<table><thead><tr><th>When</th><th>What</th><th>How many</th></tr></thead><tbody>";
     foreach($logs as $log){
-        $table .= "<tr><td>$log[datetime]</td><td>$log[name]</td><td>$log[quantity]</td></tr>";
+        $table .= "<tr><td>$log[datetime]</td><td>$log[itemname]</td><td>$log[quantity]</td></tr>";
     }
     $table .= "</tbody></table>";
     return $table;

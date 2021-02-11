@@ -13,7 +13,7 @@ function getItems(){
 
 function insertInv($itemId, $quantity){
     $db = dbConnect();
-    $sql = 'INSERT INTO inventory (itemId, quantity) VALUES (:itemId, :quantity);';
+    $sql = 'INSERT INTO inventory (itemid, quantity) VALUES (:itemId, :quantity);';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
     $stmt->bindValue(':quantity', $quantity, PDO::PARAM_INT);
@@ -37,7 +37,7 @@ function addInv($invId, $quantity){
 
 function getInvById($invId){
     $db = dbConnect();
-    $sql = 'SELECT *, COALESCE(quantity, 0) AS quantity FROM items LEFT JOIN inventory USING(itemId) WHERE invid = :invId';
+    $sql = 'SELECT *, COALESCE(quantity, 0) AS quantity FROM items LEFT JOIN inventory USING(itemid) WHERE invid = :invId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
     $stmt->execute();
@@ -48,7 +48,7 @@ function getInvById($invId){
 
 function removeInv($invId, $quantity){
     $db = dbConnect();
-    $sql = 'UPDATE inventory SET quantity = (quantity - :quantity) WHERE invid = :invId;';
+    $sql = 'UPDATE inventory SET quantity = (quantity - :quantity) WHERE itemid = :invId;';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
     $stmt->bindValue(':quantity', $quantity, PDO::PARAM_INT);
@@ -108,7 +108,7 @@ function logAction($itemId, $quantity){
 
 function getLogs(){
     $db = dbConnect();
-    $sql = "SELECT *, TO_CHAR(datetime, 'DD-MM-YYYY HH:MI:SS AM') AS dateTime FROM log JOIN items USING(itemId) ORDER BY log.datetime DESC";
+    $sql = "SELECT *, TO_CHAR(datetime, 'DD-MM-YYYY HH:MI:SS AM') AS dateTime FROM log JOIN items USING(itemid) ORDER BY log.datetime DESC";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
