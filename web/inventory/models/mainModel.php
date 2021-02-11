@@ -48,7 +48,7 @@ function getInvById($invId){
 
 function removeInv($itemid, $quantity){
     $db = dbConnect();
-    $sql = 'UPDATE inventory SET quantity = (quantity - :quantity) WHERE itemid = :invIitemidd;';
+    $sql = 'UPDATE inventory SET quantity = (quantity - :quantity) WHERE itemid = :itemid;';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':itemid', $itemid, PDO::PARAM_INT);
     $stmt->bindValue(':quantity', $quantity, PDO::PARAM_INT);
@@ -96,7 +96,7 @@ function addItem($itemName){
 
 function logAction($itemId, $quantity){
     $db = dbConnect();
-    $sql = 'INSERT INTO log (itemId, quantity) VALUES (:itemId, :quantity)';
+    $sql = 'INSERT INTO log (itemid, quantity) VALUES (:itemId, :quantity)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
     $stmt->bindValue(':quantity', $quantity, PDO::PARAM_INT);
