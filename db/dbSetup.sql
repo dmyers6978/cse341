@@ -15,8 +15,9 @@ CREATE TABLE inventory(
 );
 
 CREATE TABLE log(
-    itemId      SERIAL      PRIMARY KEY,
-    dateTime    TIMESTAMP,
+    logId       SERIAL      PRIMARY KEY,
+    itemId      INT,
+    dateTime    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     quantity    INT,
     CONSTRAINT items_FK2
     FOREIGN KEY(itemId) 
